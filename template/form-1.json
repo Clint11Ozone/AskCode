@@ -341,86 +341,39 @@
                 ]
             },
             {
-                "heading": "I’ll get you an awesome price in minutes.",
-                "subtitle": "can't wait",
-                "input_mode": {
-                    "theme": "#000",
-                    "background": "#000",
-                    "input_option": "radio",
-                    "radio": {
-                        "direction": "horizontal",
-                        "row": 2,
-                        "options": [
-                            {
-                                "background": "#000",
-                                "text-color": "#fff",
-                                "text-size": "2rem",
-                                "value": "qwertyu",
-                                "icon": "https://sdfghj"
-                            },
-                            {
-                                "background": "#000",
-                                "text-color": "#fff",
-                                "text-size": "2rem",
-                                "value": "qwertyu",
-                                "icon": "https://sdfghj"
+                "heading": "Tell us, what's wrong?",
+                "subtitle": "Find our how much you can save today! Leave your email to stay up to dae on the latest and hottest deals",
+                "content": [
+                    {
+                        "category": "display",
+                        "type": "summary",
+                        "data": {
+                            "summary": {
+                                "subCatagory": "phone_details",
+                                "phone_image": "/assets/illustrations/iPhone14PMax.svg",
+                                "edit": "/assets/illustrations/edit.svg"
                             }
-                        ]
+                        }
                     },
-                    "checkbox": {
-                        "direction": "horizontal",
-                        "row": 2,
-                        "options": [
-                            {
-                                "background": "#000",
-                                "text-color": "#fff",
-                                "text-size": "2rem",
-                                "value": "qwertyu",
-                                "icon": "https://sdfghj"
-                            },
-                            {
-                                "background": "#000",
-                                "text-color": "#fff",
-                                "text-size": "2rem",
-                                "value": "qwertyu",
-                                "icon": "https://sdfghj"
+                    {
+                        "category": "display",
+                        "type": "summary",
+                        "data": {
+                            "summary": {
+                                "subCatagory": "user_details",
+                                "user_image": "/assets/illustrations/Details.svg",
+                                "edit": "/assets/illustrations/edit.svg"
                             }
-                        ]
+                        }
                     },
-                    "text-area": {
-                        "background-color": "#000",
-                        "background-img": "https://dfsdgdgdfg",
-                        "text-size": 20,
-                        "text-color": "#fff",
-                        "isEditable": true,
-                        "height": 10,
-                        "prefilled-options": [
-                            "prefilled1",
-                            "prefilled2"
-                        ],
-                        "direction": "horizontal",
-                        "row": 2
-                    },
-                    "input-fields": {
-                        "background-color": "#000",
-                        "icon": "https://sdfghj",
-                        "background-img": "https://dfsdgdgdfg",
-                        "text-size": 20,
-                        "text-color": "#fff"
-                    },
-                    "date-time": {
-                        "background-color": "#000",
-                        "date": true,
-                        "time": true
-                    },
-                    "range": {
-                        "color": "#000",
-                        "value-visible": true,
-                        "min": 0,
-                        "max": 100,
-                        "default": 50
+                    {
+                        "category": "display",
+                        "type": "notification",
+                        "data": {
+                            "notification": "We use secure encryption to protect your data. Read our privacy policy"
+                        }
                     }
-                }
+                ]
             },
             {
                 "heading": "Ready to go?",

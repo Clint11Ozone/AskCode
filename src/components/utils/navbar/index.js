@@ -3,7 +3,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Navbar = ({ handlePrev, handleNext, slideIndex = 0, slides }) => {
   return (
-    <footer className="fixed bottom-0 left-0 w-full bg-gray-50 p-10 justify-center z-[1000]">
+    <footer className="sticky top-[100%] w-full bg-gray-50 p-10 justify-center ">
       <div className="flex justify-center space-x-4 max-w-[40rem] mx-auto">
         {/* {slideIndex != 0 && (
           <button className="bg-gray-300 text-black py-[1rem] lg:py-[1.5rem] px-[1rem] lg:px-[2rem] rounded flex items-center" onClick={handlePrev}>

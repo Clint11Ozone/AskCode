@@ -1,28 +1,110 @@
 import React from 'react'
 import Image from 'next/image'
-import EditIcon from "@/../../form-template/public/assets/icons/edit.svg"
+import Phone_details from './phone_details'
+import User_details from './user_details'
 
-function Index({ }) {
-    return (
-        <div className="p-2 border-[1px] flex mt-2 rounded-[10px] bg-white">
-            <div className="m-3">
-                <Image src={UserIcon} alt='ico' />
-            </div>
-            <div className="flex-grow text-[0.7rem] md:text-[0.9rem] text-[#9a9a9a]">
-                <h1 className="text-[1rem] text-black font-semibold mt-2 mb-1">Details</h1>
-                <p className="lg:max-w-[10rem] max-w-[7rem]">
-                    {data.formData.appertment} {data.formData.house_no}{" "}
-                </p>
-                <p className=" lg:max-w-[10rem] max-w-[7rem]">{data.formData.street}, {data.formData.zip}</p>
-                <p className=" lg:max-w-[10rem] max-w-[7rem]">{data.formData.city}</p>
-                <p className="mt-4 lg:max-w-[10rem] max-w-[7rem]">{data?.formData?.email}</p>
-                <p className="lg:max-w-[10rem] max-w-[7rem]">{data?.formData?.phone}</p>
-            </div>
-            <div className="flex">
-                <Image objectFit="" src={EditIcon} alt='' />
-            </div>
-        </div>
-    )
+function Index({ summary }) 
+{
+    console.log(summary);
+    console.log("--------------------");
+
+    const containerStyle = {
+        position: "absolute",
+        top: "80px",
+        padding: "0px 0px  0px 0px",
+        width: "385px",
+    };
+    const boxContainerP = {
+        width: "350px",
+        height: "116px",
+        padding: "20px",
+    };
+    const boxContainerD = {
+        width: "350px",
+        height: "140px",
+        padding: "20px",
+    };
+    const boxContainerProblem = {
+        width: "350px",
+        height: "122px",
+        padding: "20px",
+    };
+    const imgPhone = {
+        width: "36px",
+        height: "45px",
+        margin: "20px",
+        position: "absolute",
+        // bottom: "34px",
+        left: "18px",
+        top: "94px",
+    };
+    const detailsicon = {
+        width: "20px",
+        height: "20px",
+        margin: "20px",
+        position: "absolute",
+        // bottom: "87px",
+        left: "18px",
+        top: "223px",
+    };
+    const detailsEdit = {
+        width: "18px",
+        height: "18px",
+    };
+    const phoneEdit = {
+        width: "18px",
+        height: "18px",
+    };
+    const ProblemEdit = {
+        width: "18px",
+        height: "18px",
+    }
+    const AudioStyle = {
+        width: "24px",
+        height: "24px"
+    }
+    const editContainerDetails = {
+        width: "38px",
+        height: "38px",
+        Radius: "52px",
+        position: "absolute",
+        right: "25px",
+        top: "235px",
+        backgroundColor: "#F6F6F6",
+    };
+    const editContainerPhone = {
+        width: "38px",
+        height: "38px",
+        Radius: "52px",
+        backgroundColor: "#F6F6F6",
+        position: "absolute",
+        right: "25px",
+        top: "100px",
+    };
+    const editContainerProblem = {
+        width: "38px",
+        height: "38px",
+        Radius: "52px",
+        backgroundColor: "#F6F6F6",
+        position: "absolute",
+        right: "25px",
+        bottom: "75px",
+    };
+    const h1Left = {
+        marginLeft: "0px"
+    }
+
+
+
+
+    if (summary?.subCatagory == "phone_details") {
+        return (<Phone_details summary={summary} />);
+    } else if (summary?.subCatagory == "user_details") {
+        return (<User_details summary={summary} />);
+    } else {
+        return <p>undefined!</p>
+    }
+
 }
 
 export default Index
