@@ -44,8 +44,8 @@ function Index({ summary }) {
         margin: "20px",
         position: "absolute",
         // bottom: "87px",
-        left: "18px",
-        top: "223px",
+        left: "0px",
+        top: "0px",
     };
     const detailsEdit = {
         width: "18px",
@@ -68,8 +68,8 @@ function Index({ summary }) {
         height: "38px",
         Radius: "52px",
         position: "absolute",
-        right: "25px",
-        top: "235px",
+        right: "10px",
+        top: "10px",
         backgroundColor: "#F6F6F6",
     };
     const editContainerPhone = {
@@ -97,7 +97,7 @@ function Index({ summary }) {
 
     return (
         <div
-        className="flex border mt-5 rounded-xl items-center justify-center mx-auto"
+        className="flex border mt-5 rounded-xl items-center justify-center mx-auto relative"
         style={boxContainerD}
       >
         {/* Details */}

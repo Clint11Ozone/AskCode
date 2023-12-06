@@ -5,7 +5,7 @@ import template from '@/../../template/form-1'
 import Slide from '@/components/slide'
 
 export default function form() {
-    const router = useRouter()
+    // const router = useRouter()
 
     // console.log(template);
     // console.log("router.query: ", router.query.form);

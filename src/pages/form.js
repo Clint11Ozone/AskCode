@@ -39,7 +39,7 @@ export default function form() {
                 ref={sliderRef}
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCube]}
                 spaceBetween={50}
-                slidesPerView={1}
+                // slidesPerView={1}
                 allowTouchMove={false}
                 effect={'fade'}
                 // navigation

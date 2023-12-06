@@ -14,7 +14,8 @@ const slide = ({ template, handlePrev, handleNext, slideIndex, slides, slide }) 
             {/* <ProgressBar currentSlide={slideIndex} slides={slides} /> */}
             <Navigation handlePrev={handlePrev} handleNext={handleNext} slideIndex={slideIndex} slides={slides} />
             <Header heading={template?.heading} />
-            <SubHeader subtitle={template?.subtitle} />
+            <SubHeader subtitle={template?.subtitle} subtitle2={template.subtitle2} />
+            {/* <SubHeader subtitle2={template?.subtitle2} /> */}
             {
                 slide?.content?.map(element => {
                     if (element?.category === "display") {

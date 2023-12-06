@@ -3,7 +3,7 @@ import RadioCardLarge from "./RadioCardLarge";
 import { useState } from 'react';
 
 
-function Index({ radio }) {
+function Index({ radio, radioV }) {
     const [selectedCardID, setSelectedCardID] = useState();
 
     const handleCardSelect = (id) => {
@@ -26,6 +26,7 @@ function Index({ radio }) {
                 ))}
 
             </form>
+            
         </>
     )
 }

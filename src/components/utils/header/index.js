@@ -1,14 +1,15 @@
-import React from 'react'
+import React from "react";
 
-function Header({ heading = "Demo Heading", textSize = '2rem', color = 'black', }) {
-    return (
-        <>
-            <h1 className='mx-auto my-0 max-w-lg px-4 py-2 w-full font-bold break-words md:text-center leading-[3rem]'
-                style={{ fontSize: textSize, color: color }}>
-                {heading}
-            </h1>
-        </>
-    )
+function Header({
+  heading = "Demo Heading",
+}) {
+  return (
+    <div className="w-[375px] pt-5 pb-2.5 flex flex-col text-center  items-center">
+      <div className="w-[340px]">
+        <h1 className="text-[30px]/[35.16px] font-semibold">{heading}</h1>
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;

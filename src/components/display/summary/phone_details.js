@@ -35,8 +35,8 @@ function Index({ summary }) {
         margin: "20px",
         position: "absolute",
         // bottom: "34px",
-        left: "18px",
-        top: "94px",
+        left: "0px",
+        top: "0px",
     };
     const detailsicon = {
         width: "20px",
@@ -78,8 +78,8 @@ function Index({ summary }) {
         Radius: "52px",
         backgroundColor: "#F6F6F6",
         position: "absolute",
-        right: "25px",
-        top: "100px",
+        right: "10px",
+        top: "10px",
     };
     const editContainerProblem = {
         width: "38px",
@@ -97,7 +97,7 @@ function Index({ summary }) {
 
     return (
         <div
-            className="flex border rounded-xl items-center justify-center mx-auto"
+            className="flex border rounded-xl items-center justify-center mx-auto relative"
             style={boxContainerP}
         >
             {/* Phone */}

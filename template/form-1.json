@@ -39,23 +39,54 @@
                 ]
             },
             {
-                "heading": "What’s your name?",
-                "subtitle": "",
+                "heading": "Who’s your current provider?",
+                "subtitle": "hey",
+                "subtitle2": "hey",
                 "content": [
                     {
                         "category": "input",
-                        "type": "form",
+                        "type": "radio",
                         "data": {
-                            "form": [
+                            "radio": [
                                 {
-                                    "type": "text",
-                                    "placeholder": "First Name",
-                                    "size": "half"
+                                    "id": "1",
+                                    "icon": "/assets/icons/option-software.svg",
+                                    "text": "Software"
                                 },
                                 {
-                                    "type": "text",
-                                    "placeholder": "Last Name",
-                                    "size": "half"
+                                    "id": "2",
+                                    "icon": "/assets/icons/option-audio.svg",
+                                    "text": "Audio"
+                                },
+                                {
+                                    "id": "3",
+                                    "icon": "/assets/icons/option-camera.svg",
+                                    "text": "Camera"
+                                },
+                                {
+                                    "id": "4",
+                                    "icon": "/assets/icons/option-casing.svg",
+                                    "text": "Casing"
+                                },
+                                {
+                                    "id": "5",
+                                    "icon": "/assets/icons/option-bluetooth.svg",
+                                    "text": "Bluetooth"
+                                },
+                                {
+                                    "id": "6",
+                                    "icon": "/assets/icons/option-water.svg",
+                                    "text": "Water Damage"
+                                },
+                                {
+                                    "id": "7",
+                                    "icon": "/assets/icons/option-audio.svg",
+                                    "text": "Audio during calls"
+                                },
+                                {
+                                    "id": "8",
+                                    "icon": "/assets/icons/option-software.svg",
+                                    "text": "Software"
                                 }
                             ]
                         }
@@ -63,7 +94,7 @@
                 ]
             },
             {
-                "heading": "What’s your number?",
+                "heading": "What’s your age?",
                 "subtitle": "",
                 "content": [
                     {
