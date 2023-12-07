@@ -19,7 +19,7 @@ function Index({ element }) {
             return (<Form form={element?.data?.form} />);
             break;
         case "radio":
-            return (<Radio radio={element?.data?.radio} />);
+            return (<Radio radio={element?.data} />);
             break;
         default:
             break;

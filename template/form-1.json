@@ -217,6 +217,7 @@
                         "category": "input",
                         "type": "radio",
                         "data": {
+                            "alignment": "grid",
                             "radio": [
                                 {
                                     "id": "1",
@@ -271,6 +272,7 @@
                         "category": "input",
                         "type": "radio",
                         "data": {
+                            "alignment": "column",
                             "radio": [
                                 {
                                     "id": "1",
@@ -325,6 +327,7 @@
                         "category": "input",
                         "type": "radio",
                         "data": {
+                            "alignment": "grid",
                             "radio": [
                                 {
                                     "id": "1",
