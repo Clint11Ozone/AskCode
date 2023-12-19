@@ -1,0 +1,94 @@
+{
+    "background": "#000",
+    "theme": "#000",
+    "name": "XYZ company",
+    "logo": "https://gdgdfgdfg",
+    "form": {
+        "slide": [
+            {
+                "heading": "qwertyui",
+                "subtitle": "zxcvbnm",
+                "input_mode": {
+                    "theme": "#000",
+                    "background": "#000",
+                    "input_option": "radio",
+                    "radio": {
+                        "direction": "horizontal",
+                        "row": 2,
+                        "options": [
+                            {
+                                "background": "#000",
+                                "text-color": "#fff",
+                                "text-size": "2rem",
+                                "value": "qwertyu",
+                                "icon": "https://sdfghj"
+                            },
+                            {
+                                "background": "#000",
+                                "text-color": "#fff",
+                                "text-size": "2rem",
+                                "value": "qwertyu",
+                                "icon": "https://sdfghj"
+                            }
+                        ]
+                    },
+                    "checkbox": {
+                        "direction": "horizontal",
+                        "row": 2,
+                        "options": [
+                            {
+                                "background": "#000",
+                                "text-color": "#fff",
+                                "text-size": "2rem",
+                                "value": "qwertyu",
+                                "icon": "https://sdfghj"
+                            },
+                            {
+                                "background": "#000",
+                                "text-color": "#fff",
+                                "text-size": "2rem",
+                                "value": "qwertyu",
+                                "icon": "https://sdfghj"
+                            }
+                        ]
+                    },
+                    "text-area": {
+                        "background-color": "#000",
+                        "background-img": "https://dfsdgdgdfg",
+                        "text-size": 20,
+                        "text-color": "#fff",
+                        "isEditable": true,
+                        "height": 10,
+                        "prefilled-options": [
+                            "prefilled1",
+                            "prefilled2"
+                        ],
+                        "direction": "horizontal",
+                        "row": 2
+                    },
+                    "input-fields": {
+                        "background-color": "#000",
+                        "icon": "https://sdfghj",
+                        "background-img": "https://dfsdgdgdfg",
+                        "text-size": 20,
+                        "text-color": "#fff"
+                    },
+                    "date-time": {
+                        "background-color": "#000",
+                        "date": true,
+                        "time": true
+                    },
+                    "range": {
+                        "color": "#000",
+                        "value-visible": true,
+                        "min": 0,
+                        "max": 100,
+                        "default": 50
+                    }
+                }
+            }
+        ]
+    }
+}
+
+

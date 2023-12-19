@@ -1,0 +1,428 @@
+{
+  "url": "https://wewewewe",
+  "progressbar": true,
+  "background": "#000",
+  "theme": "#000",
+  "name": "XYZ company",
+  "logo": "https://gdgdfgdfg",
+  "form": {
+    "slide": [
+      {
+        "heading": "Broke your phone? No worries!",
+        "subtitle": "We will pass your details through to one of our repair partners. They will repair your device ASAP!",
+        "content": [
+          {
+            "category": "display",
+            "type": "Breaker",
+            "data": {
+              "textBreaker": "How it works"
+            }
+          },
+          {
+            "category": "display",
+            "type": "listView",
+            "data": {
+              "listView": [
+                "Tell us what type of device needs fixing📱",
+                "Tell us more about the damage 🛠",
+                "Send your device over get it back in just a few days! 📦"
+              ]
+            }
+          },
+          {
+            "category": "display",
+            "type": "notification",
+            "data": {
+              "notification": "We use secure encryption to protect your data. Read our privacy policy"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What’s your name?",
+        "content": [
+          {
+            "category": "input",
+            "type": "name",
+            "data": {
+              "form": [
+                {
+                  "type": "name"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What’s your number?",
+        "subtitle": "",
+        "content": [
+          {
+            "category": "input",
+            "type": "form",
+            "data": {
+              "form": [
+                {
+                  "type": "text",
+                  "placeholder": "665 881 29",
+                  "size": "full"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What’s your email?",
+        "subtitle": "",
+        "content": [
+          {
+            "category": "input",
+            "type": "email",
+            "data": {
+              "form": [
+                {
+                  "type": "email",
+                  "placeholder": "your@email.com",
+                  "size": "full"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Who’s your current provider?",
+        "subtitle": "",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/option-camera.svg",
+                  "text": "Camera"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/option-casing.svg",
+                  "text": "Casing"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/option-bluetooth.svg",
+                  "text": "Bluetooth"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/option-water.svg",
+                  "text": "Water Damage"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio during calls"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Tell us, what's wrong?",
+        "subtitle": "We will pass your details through to one of our repair partners. They will repair your device ASAP!",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/Phone.svg",
+                  "text": "Phone"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/Tablet.svg",
+                  "text": "Tablet"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/Smartwatch.svg",
+                  "text": "Smartwatch"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What is the {type} brand?",
+        "subtitle": "",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/option-camera.svg",
+                  "text": "Camera"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/option-casing.svg",
+                  "text": "Casing"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/option-bluetooth.svg",
+                  "text": "Bluetooth"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/option-water.svg",
+                  "text": "Water Damage"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio during calls"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What is the {type} model",
+        "subtitle": "",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/option-camera.svg",
+                  "text": "Camera"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/option-casing.svg",
+                  "text": "Casing"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/option-bluetooth.svg",
+                  "text": "Bluetooth"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/option-water.svg",
+                  "text": "Water Damage"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio during calls"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Summary",
+        "subtitle": "Let us know if you have any more problems",
+        "content": [
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "phone_details",
+                "phone_image": "/assets/illustrations/iPhone14PMax.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "Breaker",
+            "data": {
+              "textBreaker": "Storage"
+            }
+          },
+          {
+            "category": "input",
+            "type": "select",
+            "data": {
+                "storage": "32GB",
+                "checkMark": "/assets/illustrations/Checkmark.svg"
+            }
+          }
+          
+        ]
+      },
+      {
+        "heading": "Describe your problem",
+        "subtitle": "Pick one from the list below you can add more later",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/option-camera.svg",
+                  "text": "Camera"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/option-casing.svg",
+                  "text": "Casing"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/option-bluetooth.svg",
+                  "text": "Bluetooth"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/option-water.svg",
+                  "text": "Water Damage"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Tell us, what's wrong?",
+        "subtitle": "We will pass your details through to one of our repair partners. They will repair your device ASAP!",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Rarely"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Always"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Tell us more about the issue",
+        "content": [
+            {
+                "category": "input",
+                "type": "largeText"
+            }
+        ]
+        
+      },
+      {
+        "heading": "Summary",
+        "subtitle": "haha",
+        "content": [
+            {
+                "category": "display",
+                "type": "summary",
+                "data": {
+                    "summary": {
+                      "subCatagory": "phone_details",
+                      "phone_image": "/assets/illustrations/iPhone14PMax.svg",
+                      "edit": "/assets/illustrations/edit.svg"
+                    }
+                  }
+            }
+        ]
+        
+      }
+    ]
+  }
+}
