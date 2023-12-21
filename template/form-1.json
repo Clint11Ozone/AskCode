@@ -313,11 +313,10 @@
             "category": "input",
             "type": "select",
             "data": {
-                "storage": "32GB",
-                "checkMark": "/assets/illustrations/Checkmark.svg"
+              "storage": "32GB",
+              "checkMark": "/assets/illustrations/Checkmark.svg"
             }
           }
-          
         ]
       },
       {
@@ -398,30 +397,102 @@
       {
         "heading": "Tell us more about the issue",
         "content": [
-            {
-                "category": "input",
-                "type": "largeText"
-            }
+          {
+            "category": "input",
+            "type": "largeText"
+          }
         ]
-        
       },
       {
         "heading": "Summary",
-        "subtitle": "haha",
+        "subtitle": "Let us know if you have any more problems",
         "content": [
-            {
-                "category": "display",
-                "type": "summary",
-                "data": {
-                    "summary": {
-                      "subCatagory": "phone_details",
-                      "phone_image": "/assets/illustrations/iPhone14PMax.svg",
-                      "edit": "/assets/illustrations/edit.svg"
-                    }
-                  }
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "phone_details",
+                "phone_image": "/assets/illustrations/iPhone14PMax.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
             }
+          },
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "user_details",
+                "user_image": "/assets/illustrations/Details.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
+            }
+          }
         ]
-        
+      },
+      {
+        "heading": "What’s your IMEI?",
+        "subtitle": "Example: 12345-67890-12345-6",
+        "content": [
+          {
+            "category": "display",
+            "type": "IMEItext",
+            "data": {
+              "IMEI": {
+                "IOS": "/assets/illustrations/IMEI.svg"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "hIMEI",
+            "data": {
+              "IMEI": {
+                "IMEIphone": "/assets/illustrations/edit.svg"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "vIMEI",
+            "data": {
+              "IMEI": {
+                "IOS": "/assets/illustrations/edit.svg"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Tell us, what's wrong?",
+        "subtitle": "We will pass your details through to one of our repair partners. They will repair your device ASAP!",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "No i do not"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "yes, on paper"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Yes, digitally"
+                }
+              ]
+            }
+          }
+        ]
       }
     ]
   }
