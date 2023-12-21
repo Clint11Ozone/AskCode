@@ -10,7 +10,7 @@ import Display from "@/components/display/index"
 const slide = ({ template, handlePrev, handleNext, slideIndex, slides, slide }) => {
     // console.log(slideIndex);
     return (
-        <div className='flex flex-col items-center  bg-white'>
+        <div className='flex flex-col items-center  bg-white h-[100vh]'>
             {/* <ProgressBar currentSlide={slideIndex} slides={slides} /> */}
             <Navigation handlePrev={handlePrev} handleNext={handleNext} slideIndex={slideIndex} slides={slides} />
             <Header heading={template?.heading} />

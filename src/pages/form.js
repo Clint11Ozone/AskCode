@@ -43,7 +43,7 @@ export default function form() {
                 allowTouchMove={false}
                 effect={'fade'}
                 // navigation
-                pagination={{ clickable: true }}
+                // pagination={{ clickable: true }}
                 // scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={(e) => setActiveSlide(e.activeIndex)}

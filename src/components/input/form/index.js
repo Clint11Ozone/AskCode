@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/bootstrap.css";
+// import "react-phone-input-2/lib/bootstrap.css";
 
 function Index({ form }) {
   console.log(form);
