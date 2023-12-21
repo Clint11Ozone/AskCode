@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import template from '@/../../template/form-1'
+import template from '../../template/form-1'
+
 
 import Slide from '@/components/slide'
 

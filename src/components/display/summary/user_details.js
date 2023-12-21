@@ -1,6 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
-import EditIcon from "@/../../form-template/public/assets/icons/edit.svg"
+// import Image from 'next/image'
+// import EditIcon from "@/../../form-template/public/assets/icons/edit.svg"
 
 function Index({ summary }) {
     console.log(summary);
