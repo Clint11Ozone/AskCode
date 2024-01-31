@@ -15,7 +15,7 @@ const RadioCardLarge = ({ icon, text, selected, desc, id, onSelect }) => {
 
   return (
     <div className=" items-center pb-[15px] flex  flex-col ">
-      <div className=" w-[340px]  h-[65px] relative ">
+      <div className=" w-[340px]  h-[70px] relative ">
         <label
           onClick={handleClick}
           className={`option-card flex flex-row gap-6 items-center ${selectedClass} flex-grow rounded-[10px] py-4 pl-4 relative hover:border-[#5253f1] hover:border-[1px] transition-all duration-150 bg-white`}

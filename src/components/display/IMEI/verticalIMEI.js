@@ -3,7 +3,8 @@ import React from "react";
 // import Android from "/assets/illustrations/Android.svg";
 
 function VerticalIMEI  ({image})  {
-    var IOS = "";
+  console.log(image);
+    var Apple = "";
     var Android = "";
     return (
       <div className="w-[375px] relative pt-5 pb-2.5 flex flex-col items-center">
@@ -15,7 +16,7 @@ function VerticalIMEI  ({image})  {
             <h1 className="text-[14px] absolute top-[32px]">Check out our guide for finding your IMEI</h1>
             <div className=" absolute top-[70px] flex flex-row gap-[86px]">
               <div className="w-[74px] h-[41.63px]">
-                <img src={image?.IOS} className="absolute top-[10px]" />
+                <img src={image?.Apple} className="absolute top-[10px]" />
               </div>
               <div>
                 <img src={image?.Android} className="w-[96.1px] h-[62px]" />

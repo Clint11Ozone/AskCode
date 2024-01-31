@@ -1,15 +1,17 @@
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, Marker, } from '@react-google-maps/api';
 import { Autocomplete } from '@react-google-maps/api';
 import { useState, useEffect, useCallback } from "react";
 
 const containerStyle = {
-    width: '400px',
-    height: '200px'
+    width: '338px',
+    height: '316px',
+    borderRadius: '19.76px',
+    backgroundColor: '#fff'
 };
 
 const center = {
     lat: 6.7707568,
-    lng: 3.2073722
+    lng: 3.3073322
 };
 
 
@@ -31,6 +33,10 @@ const Map = ({ position=center }) => {
 
     const [map, setMap] = useState(null)
 
+
+    const [selectedAddress, setSelectedAddress] = useState(null);
+
+
     const onLoad = useCallback(function callback(map) {
         // This is just an example of getting and using the map instance!!! don't just blindly copy!
         const bounds = new window.google.maps.LatLngBounds(center);
@@ -45,13 +51,13 @@ const Map = ({ position=center }) => {
 
     return (
 
-        <div className="h-[12rem] bg-slate-200 my-[1rem]">
+        <div className="">
             {
                 isLoaded ? (
                     <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={marker}
-                        zoom={10}
+                        zoom={9}
                         onLoad={onLoad}
                         onUnmount={onUnmount}
 
@@ -62,10 +68,13 @@ const Map = ({ position=center }) => {
                             position={marker}
 
                         />
+                        
+                        
                         <></>
                     </GoogleMap>
                 ) : <></>
             }
+
         </div>
     )
 }

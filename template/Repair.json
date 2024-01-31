@@ -23,18 +23,24 @@
             "type": "listView",
             "data": {
               "listView": [
-                "Tell us what type of device needs fixing📱",
-                "Tell us more about the damage 🛠",
-                "Send your device over get it back in just a few days! 📦"
+                {
+                  "text": "Tell us what type of device needs fixing",
+                  "icon": "/assets/icons/Phone.svg"
+                },
+                {
+                  "text": "Tell us more about the damage ",
+                  "icon": "/assets/icons/Tablet.svg"
+                },
+                {
+                  "text": "Send your device over get it back in just a few days! ",
+                  "icon": "/assets/icons/Email.svg"
+                }
               ]
             }
           },
           {
             "category": "display",
-            "type": "notification",
-            "data": {
-              "notification": "We use secure encryption to protect your data. Read our privacy policy"
-            }
+            "type": "encrypt"
           }
         ]
       },
@@ -86,6 +92,25 @@
                   "type": "email",
                   "placeholder": "your@email.com",
                   "size": "full"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What’s your email?",
+        "subtitle": "",
+        "content": [
+          {
+            "category": "display",
+            "type": "loader-email",
+            "data": {
+              "email": [
+                {
+                  "text": "email",
+                  "subject": "your@email.com",
+                  "to": "full"
                 }
               ]
             }
@@ -448,8 +473,9 @@
             "category": "display",
             "type": "hIMEI",
             "data": {
-              "IMEI": {
-                "IMEIphone": "/assets/illustrations/edit.svg"
+              "box": {
+                "IMEIphone": "/assets/illustrations/IMEIPhone.svg",
+                "IMEIbox": "/assets/illustrations/IMEIbox.svg"
               }
             }
           },
@@ -457,8 +483,9 @@
             "category": "display",
             "type": "vIMEI",
             "data": {
-              "IMEI": {
-                "IOS": "/assets/illustrations/edit.svg"
+              "image": {
+                "Apple": "/assets/illustrations/IOS.svg",
+                "Android": "/assets/illustrations/Android.svg"
               }
             }
           }
@@ -491,6 +518,71 @@
                 }
               ]
             }
+          }
+        ]
+      },
+      {
+        "heading": "Who’s your current provider?",
+        "subtitle": "",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "GSMBrand",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/option-camera.svg",
+                  "text": "Camera"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/option-casing.svg",
+                  "text": "Casing"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/option-bluetooth.svg",
+                  "text": "Bluetooth"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/option-water.svg",
+                  "text": "Water Damage"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio during calls"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Summary",
+        "subtitle": "Let us know if you have any more problems",
+        "content": [
+          {
+            "category": "input",
+            "type": "fileUploader"
           }
         ]
       }

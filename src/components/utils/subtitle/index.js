@@ -7,7 +7,7 @@ function SubHeader({
   color = '#808080',
 }) {
   return (
-    <div className="w-[375px] mb-[20px] flex flex-col items-center">
+    <div className="w-[375px] mt-[15px] flex flex-col items-center">
       <div className="w-[340px] text-center">
         <p className="text-sm/[23px] font-light">{subtitle}</p>
         

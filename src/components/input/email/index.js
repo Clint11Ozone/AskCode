@@ -29,6 +29,7 @@ function Index({ Mail}){
             onChange={handleEmailChange}
             className="w-[340px] pl-[50px] h-[59px] rounded-lg border " // Adjust the width and padding as needed
             placeholder="Enter your email"
+            required
           />
         </form>
       </div>

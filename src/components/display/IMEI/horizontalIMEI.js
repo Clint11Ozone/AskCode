@@ -2,8 +2,8 @@ import React from "react";
 // import IMEIphone from "/assets/illustrations/IMEIPhone.svg";
 // import IMEIbox from "/assets/illustrations/IMEIbox.svg";
 
-function HorizontalIMEI ({image})  {
-    console.log(image);
+function HorizontalIMEI ({box})  {
+    console.log(box);
 
     var IMEIphone = "";
     var IMEIbox = "";
@@ -14,7 +14,7 @@ function HorizontalIMEI ({image})  {
             <h1 className="absolute top-[5px] left-[9px]">1</h1>
           </div>
           <div>
-            <img src={image?.IMEIphone} className=" w-[66.38px] h-[61.802px]" />
+            <img src={box?.IMEIphone} className=" w-[66.38px] h-[61.802px]" />
             <h1 className="font-normal text-[10px]">Dial *#06# </h1>
           </div>
         </div>
@@ -23,7 +23,7 @@ function HorizontalIMEI ({image})  {
             <h1 className="absolute top-[5px] left-[9px]">2</h1>
           </div>
           <div >
-            <img src={image?.IMEIbox} className=" ml-[25%] w-[68.67px] h-[56.08px]" />
+            <img src={box?.IMEIbox} className=" ml-[25%] w-[68.67px] h-[56.08px]" />
             <h1 className="font-normal text-[10px]">Check the box of your device</h1>
           </div>
         </div>

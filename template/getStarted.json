@@ -1,0 +1,632 @@
+{
+  "url": "https://wewewewe",
+  "progressbar": true,
+  "background": "#000",
+  "theme": "#000",
+  "name": "XYZ company",
+  "logo": "https://gdgdfgdfg",
+  "form": {
+    "slide": [
+      {
+        "heading": "Who's keeping you connected these days?📶",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "GSMBrand",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/MNY.svg",
+                  "text": "Me&You"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/Telkom.svg",
+                  "text": "Telkom"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/Vodacom.svg",
+                  "text": "Vodacom"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/Lyca.svg",
+                  "text": "Lyca Mobile"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/MTN.svg",
+                  "text": "MTN"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/HelloMobile.svg",
+                  "text": "Hello Mobile"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/MTN.svg",
+                  "text": "MTN"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/HelloMobile.svg",
+                  "text": "Hello Mobile"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What is your favorite  brand? 🤩",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/option-camera.svg",
+                  "text": "Camera"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/option-casing.svg",
+                  "text": "Casing"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/option-bluetooth.svg",
+                  "text": "Bluetooth"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/option-water.svg",
+                  "text": "Water Damage"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio during calls"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "How much Netflix or YouTube do you watch? 🍿",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Sometimes"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "A few times a week"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Constantly binging"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What about gaming? 🎮",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times per week"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "How often do you call? 📞",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Rarely"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Always"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What type of deal are you looking for?",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/Sim.svg",
+                  "text": "Sim"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/Phone.svg",
+                  "text": "Phone"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/Internet.svg",
+                  "text": "Internet"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Who's keeping you connected these days?📶",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/MNY.svg",
+                  "text": "Me&You"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/Telkom.svg",
+                  "text": "Telkom"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/Vodacom.svg",
+                  "text": "Vodacom"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/Lyca.svg",
+                  "text": "Lyca Mobile"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/MTN.svg",
+                  "text": "MTN"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/HelloMobile.svg",
+                  "text": "Hello Mobile"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What is your favorite  brand? 🤩",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/option-camera.svg",
+                  "text": "Camera"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/option-casing.svg",
+                  "text": "Casing"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/option-bluetooth.svg",
+                  "text": "Bluetooth"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/option-water.svg",
+                  "text": "Water Damage"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio during calls"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Netflix, Hulu, YouTube – How much do you watch? 🍿",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Sometimes"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "A few times a week"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Constantly binging"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What about gaming? 🎮",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times per week"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What type of phone are you looking for? ✨",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/Fire.svg",
+                  "text": " The latest and greatest"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/Nphone.svg",
+                  "text": "New phone"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/Recycle.svg",
+                  "text": "Refurbished"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Who's keeping you connected these days?📶",
+
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/option-camera.svg",
+                  "text": "Camera"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/option-casing.svg",
+                  "text": "Casing"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/option-bluetooth.svg",
+                  "text": "Bluetooth"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/option-water.svg",
+                  "text": "Water Damage"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio during calls"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Netflix, Hulu, YouTube – How much do you watch? 🍿",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Sometimes"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "A few times a week"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Constantly binging"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What about gaming? 🎮",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times per week"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Do you jump on Zoom, Skype, or other video calls? 🎥",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Not really"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Once a week"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times a day"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Do you work or study from home often? 💼",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Not really"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Quite a bit"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Always online"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "url": "https://wewewewe",
+  "progressbar": true,
+  "background": "#000",
+  "theme": "#000",
+  "name": "XYZ company",
+  "logo": "https://gdgdfgdfg",
+  "form": {
+    "slide": [
+      {
+        "heading": "Broke your phone? No worries!",
+        "subtitle": "We will pass your details through to one of our repair partners. They will repair your device ASAP!",
+        "content": [
+          {
+            "category": "display",
+            "type": "Breaker",
+            "data": {
+              "textBreaker": "How it works"
+            }
+          },
+          {
+            "category": "display",
+            "type": "listView",
+            "data": {
+              "listView": [
+                {
+                  "text": "Tell us what type of device needs fixing",
+                  "icon": "/assets/icons/oRoad.svg"
+                },
+                {
+                  "text": "Tell us more about the damage ",
+                  "icon": "/assets/icons/Triangle.svg"
+                },
+                {
+                  "text": "Send your device over get it back in just a few days! ",
+                  "icon": "/assets/icons/vest.svg"
+                }
+              ]
+            }
+          },
+
+          {
+            "category": "display",
+            "type": "encrypt"
+          }
+        ]
+      },
+      {
+        "heading": "We need access to your location!",
+        "subtitle": "So e can send over someone as quickly as possible!",
+        "content": [
+          {
+            "category": "display",
+            "type": "location"
+          },
+          {
+            "category": "display",
+            "type": "notification",
+            "data": {
+              "notification": {
+                "text": "It is important you choose the Always Allow option it makes the system work better, thank you!",
+                "icon": "/assets/icons/pinLoc.svg"}
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Tell us, what's wrong?",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/road.svg",
+                  "text": "I’m on a highway"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/safe.svg",
+                  "text": "I’m standing somewhere unsafe"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/shield.svg",
+                  "text": "I’m standing somewhere safe"
+                }
+              ]
+            }
+          },
+          {
+            "category": "display",
+            "type": "notification",
+            "data": {
+              "notification": {
+                "text": "It is important you choose the Always Allow option it makes the system work better, thank you!",
+                "icon": "/assets/icons/pinLoc.svg"}
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Who’s your current provider?",
+        "subtitle": "",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/car.svg",
+                  "text": "Car"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/Motorcycle.svg",
+                  "text": "Motorcycle"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/bus.svg",
+                  "text": "Bus"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/truck.svg",
+                  "text": "Truck"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/bike.svg",
+                  "text": "Bike"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/other.svg",
+                  "text": "Other"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Who’s your current provider?",
+        "subtitle": "Find out how much you can save today! Leave your email to stay up to date on the latest and hottest deals.",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/Tire.svg",
+                  "text": "FLat tire"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/Key.svg",
+                  "text": "Locks"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/Damage.svg",
+                  "text": "Damage"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/Battery.svg",
+                  "text": "Battery"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/Petrol.svg",
+                  "text": "Petrol"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/other.svg",
+                  "text": "Other"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Tell us more about the issue",
+        "content": [
+          {
+            "category": "input",
+            "type": "select",
+            "data": {
+              "storage": "40",
+              "checkMark": "/assets/illustrations/Checkmark.svg"
+            }
+          },
+          {
+            "category": "input",
+            "type": "largeText"
+          }
+        ]
+      },
+      {
+        "heading": "Confirm location",
+        "content": [
+          {
+            "category": "input",
+            "type": "email",
+            "data": {
+              "form": [
+                {
+                  "type": "email",
+                  "placeholder": "your@email.com",
+                  "size": "full"
+                }
+              ]
+            }
+          },
+          {
+            "category": "display",
+            "type": "map"
+          }
+        ]
+      },
+      {
+        "heading": "Please fill in your contact details",
+        "subtitle": "",
+        "content": [
+          {
+            "category": "input",
+            "type": "name",
+            "data": {}
+          },
+          {
+            "category": "input",
+            "type": "email",
+            "data": {
+              "form": [
+                {
+                  "type": "email",
+                  "placeholder": "your@email.com",
+                  "size": "full"
+                }
+              ]
+            }
+          },
+          {
+            "category": "input",
+            "type": "form",
+            "data": {
+              "form": [
+                {
+                  "type": "text",
+                  "placeholder": "665 881 29",
+                  "size": "full"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What’s your number?",
+        "subtitle": "",
+        "content": [
+          {
+            "category": "display",
+            "type": "IMEItext",
+            "data": {
+              "IMEI": {
+                "IOS": "/assets/icons/pinPoint.svg",
+                "PH": "what would you like it to be"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "Breaker",
+            "data": {
+              "textBreaker": "Or enter your address manually"
+            }
+          },
+          {
+            "category": "display",
+            "type": "IMEItext",
+            "data": {
+              "IMEI": {
+                "IOS": "/assets/icons/road.svg",
+                "PH": "what would you like it to be"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "IMEItext",
+            "data": {
+              "IMEI": {
+                "IOS": "/assets/icons/building.svg",
+                "PH": "what would you like it to be"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "IMEItext",
+            "data": {
+              "IMEI": {
+                "IOS": "/assets/icons/house.svg",
+                "PH": "what would you like it to be"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Summary",
+        "subtitle": "Let us know if you have any more problems",
+        "content": [
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "phone_details",
+                "phone_image": "/assets/illustrations/iPhone14PMax.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "user_details",
+                "user_image": "/assets/illustrations/Details.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "heading": "We will call you back",
+        "subtitle": "But, safety first! We will pass your details through to one of our  partners. They will arrive ASAP!",
+        "content": [
+          {
+            "category": "display",
+            "type": "centreBreaker",
+            "data": {
+              "centreTB": "Make sure you!"
+            }
+          },
+          {
+            "category": "display",
+            "type": "warning",
+            "data": {
+              "warning": {
+                "text": "Get behind the roadguards",
+                "icon": "/assets/icons/oRoad.svg"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "warning",
+            "data": {
+              "warning": {
+                "text": "Get behind the roadguards",
+                "icon": "/assets/icons/danger.svg"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "warning",
+            "data": {
+              "warning": {
+                "text": "Get behind the roadguards",
+                "icon": "/assets/icons/vest.svg"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

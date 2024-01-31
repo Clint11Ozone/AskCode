@@ -6,7 +6,14 @@ import Summary from "@/components/display/summary/default";
 import Breaker from "@/components//display/textBreaker/textBreaker";
 import VerticalIMEI from "@/components/display/IMEI/verticalIMEI";
 import HorizontalIMEI from "@/components/display/IMEI/horizontalIMEI";
-import IMEItext from "@/components/display/IMEI/IMEItext"
+import IMEItext from "@/components/display/IMEI/IMEItext";
+import Encrypt from "@/components/display/encrypt/encrypt";
+import MediumIcon from "@/components/display/location/mediumIcon";
+import MapI from "@/components/utils/google_maps/map";
+import CentreBreaker from "@/components/display/textBreaker/centreTB";
+import Warning from "@/components/display/warning/warning";
+// import LoaderEmail from "@/components/display/loader/email"
+
 // export { checkBox, dateTime, InputFields, Radio, Range, TextArea, }
 
 import React from "react";
@@ -34,15 +41,33 @@ function Index({ element }) {
     case "Breaker":
       return <Breaker textBreaker={element?.data?.textBreaker} />;
       break;
-      case "vIMEI":
-      return <VerticalIMEI VerticalIMEI={element?.data?.VerticalIMEI} />;
+    case "centreBreaker":
+      return <CentreBreaker centreTB={element?.data?.centreTB} />;
       break;
-      case "hIMEI":
-      return <HorizontalIMEI HorizontalIMEI={element?.data?.HorizontalIMEI} />;
+    case "vIMEI":
+      return <VerticalIMEI image={element?.data?.image} />;
       break;
-      case "IMEItext":
+    case "hIMEI":
+      return <HorizontalIMEI box={element?.data?.box} />;
+      break;
+    case "IMEItext":
       return <IMEItext IMEItext={element?.data?.IMEI} />;
       break;
+    case "encrypt":
+      return <Encrypt Encrypt={element?.data?.Encrypt} />;
+      break;
+    case "location":
+      return <MediumIcon MediumIcon={element?.data?.MediumIcon} />;
+      break;
+    case "map":
+      return <MapI MapI={element?.data?.MapI} />;
+      break;
+    case "warning":
+      return <Warning warning={element?.data?.warning} />;
+      break;
+    // case "loader-email":
+    //   return <LoaderEmail email={element?.data?.email} />;
+    //   break;
     default:
       break;
   }

@@ -6,9 +6,10 @@ import Range from "@/components/input/range";
 import TextArea from "@/components/input/text-area";
 import Form from "@/components/input/form";
 import Email from "@/components/input/email";
-import Phone from "@/components/input/NameSurname";
+import Details from "@/components/input/NameSurname";
 import Select from "@/components/input/choice";
 import LargeText from "./largeInput/Index";
+import FileUploader from "@/components/input/fileUploader/FileUploader2"
 
 // export { checkBox, dateTime, InputFields, Radio, Range, TextArea, }
 
@@ -28,14 +29,17 @@ function Index({ element }) {
       return <Email email={element?.data} />;
       break;
     case "name":
-      return <Phone phone={element?.data} />;
+      return <Details phone={element?.data} />;
       break;
     case "select":
       return <Select select={element?.data} />;
       break;
-      case "largeText":
-        return <LargeText LargeText={element?.data} />;
-        break;
+    case "largeText":
+      return <LargeText LargeText={element?.data} />;
+      break;
+    case "fileUploader":
+      return <FileUploader FileUploader={element?.data} />;
+      break;
     default:
   }
 }
