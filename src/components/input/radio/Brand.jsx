@@ -1,6 +1,5 @@
 import Image from "next/image";
-// import Checkbox from "@/../../form-template/public/assets/icons/drm2-checkbox.svg";
-// import Link from "next/link";
+
 
 const RadioCardLarge = ({ icon, text, selected, desc, id, onSelect }) => {
   const selectedClass = selected

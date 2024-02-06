@@ -248,7 +248,7 @@
             "category": "input",
             "type": "radio",
             "data": {
-              "alignment": "grid",
+              "alignment": "GSMBrand",
               "radio": [
                 {
                   "id": "1",
@@ -269,16 +269,6 @@
                   "id": "4",
                   "icon": "/assets/icons/Lyca.svg",
                   "text": "Lyca Mobile"
-                },
-                {
-                  "id": "5",
-                  "icon": "/assets/icons/MTN.svg",
-                  "text": "MTN"
-                },
-                {
-                  "id": "6",
-                  "icon": "/assets/icons/HelloMobile.svg",
-                  "text": "Hello Mobile"
                 }
               ]
             }
