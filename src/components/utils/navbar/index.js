@@ -25,7 +25,7 @@ const Navbar = ({ handlePrev, handleNext, slideIndex = 0, slides }) => {
       if(slideIndex !== slides?.length - 1 ){
         handleNext();
       }else{
-        window.location.href = "encrypt  ";
+        window.location.href = "seeDeals";
       }
       
     };

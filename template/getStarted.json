@@ -6,7 +6,7 @@
   "name": "XYZ company",
   "logo": "https://gdgdfgdfg",
   "form": {
-    "slide": [
+    "simSlides": [
       {
         "heading": "Who's keeping you connected these days?📶",
         "content": [
@@ -19,42 +19,50 @@
                 {
                   "id": "1",
                   "icon": "/assets/icons/MNY.svg",
-                  "text": "Me&You"
+                  "text": "Me&You",
+                  "value": "MTN"
                 },
                 {
                   "id": "2",
                   "icon": "/assets/icons/Telkom.svg",
-                  "text": "Telkom"
+                  "text": "Telkom",
+                  "value": "MTN"
                 },
                 {
                   "id": "3",
                   "icon": "/assets/icons/Vodacom.svg",
-                  "text": "Vodacom"
+                  "text": "Vodacom",
+                  "value": "MTN"
                 },
                 {
                   "id": "4",
                   "icon": "/assets/icons/Lyca.svg",
-                  "text": "Lyca Mobile"
+                  "text": "Lyca Mobile",
+                  "value": "MTN"
                 },
                 {
                   "id": "5",
                   "icon": "/assets/icons/MTN.svg",
-                  "text": "MTN"
+                  "text": "MTN",
+                  "value": "MTN"
                 },
                 {
                   "id": "6",
                   "icon": "/assets/icons/HelloMobile.svg",
-                  "text": "Hello Mobile"
+                  "text": "Hello Mobile",
+                  "value": "MTN"
                 },
                 {
                   "id": "7",
                   "icon": "/assets/icons/MTN.svg",
-                  "text": "MTN"
+                  "text": "MTN",
+                  "value": "MTN"
                 },
                 {
                   "id": "8",
                   "icon": "/assets/icons/HelloMobile.svg",
-                  "text": "Hello Mobile"
+                  "text": "Hello Mobile",
+                  "value": "MTN"
                 }
               ]
             }
@@ -211,7 +219,9 @@
             }
           }
         ]
-      },
+      }
+    ],
+    "initialSlide": [
       {
         "heading": "What type of deal are you looking for?",
         "content": [
@@ -240,7 +250,9 @@
             }
           }
         ]
-      },
+      }
+    ],
+    "phoneSlides": [
       {
         "heading": "Who's keeping you connected these days?📶",
         "content": [
@@ -253,22 +265,50 @@
                 {
                   "id": "1",
                   "icon": "/assets/icons/MNY.svg",
-                  "text": "Me&You"
+                  "text": "Me&You",
+                  "value": "MTN"
                 },
                 {
                   "id": "2",
                   "icon": "/assets/icons/Telkom.svg",
-                  "text": "Telkom"
+                  "text": "Telkom",
+                  "value": "MTN"
                 },
                 {
                   "id": "3",
                   "icon": "/assets/icons/Vodacom.svg",
-                  "text": "Vodacom"
+                  "text": "Vodacom",
+                  "value": "MTN"
                 },
                 {
                   "id": "4",
                   "icon": "/assets/icons/Lyca.svg",
-                  "text": "Lyca Mobile"
+                  "text": "Lyca Mobile",
+                  "value": "MTN"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/MTN.svg",
+                  "text": "MTN",
+                  "value": "MTN"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/HelloMobile.svg",
+                  "text": "Hello Mobile",
+                  "value": "MTN"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/MTN.svg",
+                  "text": "MTN",
+                  "value": "MTN"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/HelloMobile.svg",
+                  "text": "Hello Mobile",
+                  "value": "MTN"
                 }
               ]
             }
@@ -330,7 +370,7 @@
         ]
       },
       {
-        "heading": "Netflix, Hulu, YouTube – How much do you watch? 🍿",
+        "heading": "How much Netflix or YouTube do you watch? 🍿",
         "content": [
           {
             "category": "input",
@@ -398,7 +438,7 @@
         ]
       },
       {
-        "heading": "What type of phone are you looking for? ✨",
+        "heading": "How often do you call? 📞",
         "content": [
           {
             "category": "input",
@@ -408,18 +448,82 @@
               "radio": [
                 {
                   "id": "1",
-                  "icon": "/assets/icons/Fire.svg",
-                  "text": " The latest and greatest"
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Rarely"
                 },
                 {
                   "id": "2",
-                  "icon": "/assets/icons/Nphone.svg",
-                  "text": "New phone"
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes"
                 },
                 {
                   "id": "3",
-                  "icon": "/assets/icons/Recycle.svg",
-                  "text": "Refurbished"
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Always"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "internetSlides": [
+      {
+        "heading": "Who's keeping you connected these days?📶",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "GSMBrand",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/MNY.svg",
+                  "text": "Me&You",
+                  "value": "MTN"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/Telkom.svg",
+                  "text": "Telkom",
+                  "value": "MTN"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/Vodacom.svg",
+                  "text": "Vodacom",
+                  "value": "MTN"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/Lyca.svg",
+                  "text": "Lyca Mobile",
+                  "value": "MTN"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/MTN.svg",
+                  "text": "MTN",
+                  "value": "MTN"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/HelloMobile.svg",
+                  "text": "Hello Mobile",
+                  "value": "MTN"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/MTN.svg",
+                  "text": "MTN",
+                  "value": "MTN"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/HelloMobile.svg",
+                  "text": "Hello Mobile",
+                  "value": "MTN"
                 }
               ]
             }
@@ -427,8 +531,7 @@
         ]
       },
       {
-        "heading": "Who's keeping you connected these days?📶",
-
+        "heading": "What is your favorite  brand? 🤩",
         "content": [
           {
             "category": "input",
@@ -482,7 +585,7 @@
         ]
       },
       {
-        "heading": "Netflix, Hulu, YouTube – How much do you watch? 🍿",
+        "heading": "How much Netflix or YouTube do you watch? 🍿",
         "content": [
           {
             "category": "input",
@@ -550,7 +653,7 @@
         ]
       },
       {
-        "heading": "Do you jump on Zoom, Skype, or other video calls? 🎥",
+        "heading": "How often do you call? 📞",
         "content": [
           {
             "category": "input",
@@ -561,41 +664,7 @@
                 {
                   "id": "1",
                   "icon": "/assets/icons/rarely.svg",
-                  "text": "Not really"
-                },
-                {
-                  "id": "2",
-                  "icon": "/assets/icons/sometimes.svg",
-                  "text": "Once a week"
-                },
-                {
-                  "id": "3",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Every day"
-                },
-                {
-                  "id": "4",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Multiple times a day"
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "heading": "Do you work or study from home often? 💼",
-        "content": [
-          {
-            "category": "input",
-            "type": "radio",
-            "data": {
-              "alignment": "column",
-              "radio": [
-                {
-                  "id": "1",
-                  "icon": "/assets/icons/rarely.svg",
-                  "text": "Not really"
+                  "text": "Rarely"
                 },
                 {
                   "id": "2",
@@ -605,12 +674,7 @@
                 {
                   "id": "3",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Quite a bit"
-                },
-                {
-                  "id": "4",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Always online"
+                  "text": "Always"
                 }
               ]
             }
