@@ -1,94 +1,66 @@
-import { useState, useCallback, useRef } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
-import template from '@/../../template/getStarted';
-
+import { useState, useRef, useCallback } from 'react';
 import Slide from '@/components/slide';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Virtual, Keyboard, Mousewheel, Navigation, A11y, Pagination, Scrollbar, Parallax, FreeMode, Grid, Manipulation, Zoom, Controller, History, HashNavigation, Autoplay, EffectFade, EffectCube, EffectFlip, EffectCoverflow, EffectCards, EffectCreative, Thumbs } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCube } from 'swiper/modules';
+import template from '@/../../template/getStarted';
 
 export default function Form() {
-  const router = useRouter();
-  const [selectedOption, setSelectedOption] = useState(null);
+    const initialSlide = template.form.initialSlide;
+    const simSlides = template.form.simSlides;
+    const phoneSlides = template.form.phoneSlides;
+    const internetSlides = template.form.internetSlides;
 
-  const handleOptionChange = (option) => {
-    setSelectedOption(option);
-  };
+    const [selectedOption, setSelectedOption] = useState(initialSlide);
 
-  const slides = selectedOption
-    ? template.form[`${selectedOption.toLowerCase()}Slides`]
-    : template.form.initialSlide;
+    const handleRadioChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
 
-  const sliderRef = useRef(null);
+    // Determine the correct set of slides based on the selected option
+    const slides = selectedOption && template.form[selectedOption]
+        ? template.form[selectedOption]
+        : template.form.initialSlide;
 
-  const handlePrev = useCallback(() => {
-    if (!sliderRef.current) return;
-    sliderRef.current.swiper.slidePrev();
-  }, []);
+    const sliderRef = useRef(null);
 
-  const handleNext = useCallback(() => {
-    if (!sliderRef.current) return;
-    sliderRef.current.swiper.slideNext();
-  }, []);
+    const handlePrev = useCallback(() => {
+        if (!sliderRef.current) return;
+        sliderRef.current.swiper.slidePrev();
+    }, []);
 
-  const [activeSlide, setActiveSlide] = useState(0);
+    const handleNext = useCallback(() => {
+        if (!sliderRef.current) return;
+        sliderRef.current.swiper.slideNext();
+    }, []);
 
-  return (
-    <div>
-      {!selectedOption && (
-        <Swiper
-          ref={sliderRef}
-          modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCube]}
-          spaceBetween={50}
-          allowTouchMove={false}
-          effect={'fade'}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={(e) => setActiveSlide(e.activeIndex)}
-        >
-          {template.form.initialSlide.map((item, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <Slide
-                  template={item}
-                  handlePrev={handlePrev}
-                  handleNext={handleNext}
-                  slideIndex={activeSlide}
-                  slides={template.form.initialSlide}
-                  slide={template.form.initialSlide[activeSlide]}
-                  handleOptionChange={handleOptionChange}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      )}
+    const [activeSlide, setActiveSlide] = useState(0);
 
-      {selectedOption && (
-        <Swiper
-          ref={sliderRef}
-          modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCube]}
-          spaceBetween={50}
-          allowTouchMove={false}
-          effect={'fade'}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={(e) => setActiveSlide(e.activeIndex)}
-        >
-          {slides.map((item, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <Slide
-                  template={item}
-                  handlePrev={handlePrev}
-                  handleNext={handleNext}
-                  slideIndex={activeSlide}
-                  slides={slides}
-                  slide={slides[activeSlide]}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      )}
-    </div>
-  );
+    return (
+        <div>
+            <Swiper
+                ref={sliderRef}
+                modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCube]}
+                spaceBetween={50}
+                allowTouchMove={false}
+                effect={'fade'}
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
+            >
+                {slides.map((item, index) => (
+                    <SwiperSlide key={index}>
+                        <Slide 
+                            template={item} 
+                            handlePrev={handlePrev} 
+                            handleNext={handleNext} 
+                            slideIndex={activeSlide} 
+                            slides={slides} 
+                            slide={slides[activeSlide]} 
+                            onSelect={handleRadioChange}
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
+    );
 }
