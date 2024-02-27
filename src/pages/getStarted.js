@@ -6,21 +6,28 @@ import { Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCube } from 
 import template from '@/../../template/getStarted';
 
 export default function Form() {
-    const initialSlide = template.form.initialSlide;
-    const simSlides = template.form.simSlides;
-    const phoneSlides = template.form.phoneSlides;
-    const internetSlides = template.form.internetSlides;
-
-    const [selectedOption, setSelectedOption] = useState(initialSlide);
+    // Removed the individual slide constants as they are no longer directly used
+    const [selectedOption, setSelectedOption] = useState(template.form.initialSlide); // Initially empty or a default value
 
     const handleRadioChange = (event) => {
         setSelectedOption(event.target.value);
     };
 
     // Determine the correct set of slides based on the selected option
-    const slides = selectedOption && template.form[selectedOption]
-        ? template.form[selectedOption]
-        : template.form.initialSlide;
+    let slides;
+    switch (selectedOption) {
+        case '1':
+            slides = template.form.simSlides;
+            break;
+        case '2':
+            slides = template.form.phoneSlides;
+            break;
+        case '3':
+            slides = template.form.internetSlides;
+            break;
+        default:
+            slides = template.form.initialSlide; // Default case
+    }
 
     const sliderRef = useRef(null);
 
@@ -37,7 +44,7 @@ export default function Form() {
     const [activeSlide, setActiveSlide] = useState(0);
 
     return (
-        <div>
+        <div> 
             <Swiper
                 ref={sliderRef}
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCube]}

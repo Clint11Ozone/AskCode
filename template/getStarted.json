@@ -250,6 +250,35 @@
             }
           }
         ]
+      },
+      {
+        "heading": "How often do you call? 📞",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Rarely"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Always"
+                }
+              ]
+            }
+          }
+        ]
       }
     ],
     "phoneSlides": [
