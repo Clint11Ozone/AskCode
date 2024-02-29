@@ -19,42 +19,50 @@
                 {
                   "id": "1",
                   "icon": "/assets/icons/MNY.svg",
-                  "text": "Me&You"
+                  "text": "Me&You",
+                  "value": "MTN"
                 },
                 {
                   "id": "2",
                   "icon": "/assets/icons/Telkom.svg",
-                  "text": "Telkom"
+                  "text": "Telkom",
+                  "value": "MTN"
                 },
                 {
                   "id": "3",
                   "icon": "/assets/icons/Vodacom.svg",
-                  "text": "Vodacom"
+                  "text": "Vodacom",
+                  "value": "MTN"
                 },
                 {
                   "id": "4",
                   "icon": "/assets/icons/Lyca.svg",
-                  "text": "Lyca Mobile"
+                  "text": "Lyca Mobile",
+                  "value": "MTN"
                 },
                 {
                   "id": "5",
                   "icon": "/assets/icons/MTN.svg",
-                  "text": "MTN"
+                  "text": "MTN",
+                  "value": "MTN"
                 },
                 {
                   "id": "6",
                   "icon": "/assets/icons/HelloMobile.svg",
-                  "text": "Hello Mobile"
+                  "text": "Hello Mobile",
+                  "value": "MTN"
                 },
                 {
                   "id": "7",
                   "icon": "/assets/icons/MTN.svg",
-                  "text": "MTN"
+                  "text": "MTN",
+                  "value": "MTN"
                 },
                 {
                   "id": "8",
                   "icon": "/assets/icons/HelloMobile.svg",
-                  "text": "Hello Mobile"
+                  "text": "Hello Mobile",
+                  "value": "MTN"
                 }
               ]
             }
@@ -129,17 +137,20 @@
                 {
                   "id": "1",
                   "icon": "/assets/icons/MNY.svg",
-                  "text": "Me&You"
+                  "text": "Me&You",
+                  "value": "MTN"
                 },
                 {
                   "id": "2",
                   "icon": "/assets/icons/Telkom.svg",
-                  "text": "Telkom"
+                  "text": "Telkom",
+                  "value": "MTN"
                 },
                 {
                   "id": "3",
                   "icon": "/assets/icons/Vodacom.svg",
-                  "text": "Vodacom"
+                  "text": "Vodacom",
+                  "value": "MTN"
                 },
                 {
                   "id": "4",
@@ -172,7 +183,7 @@
         ]
       },
       {
-        "heading": "Netflix, Hulu, YouTube – How much do you watch? 🍿",
+        "heading": "How much Netflix or YouTube do you watch? 🍿",
         "content": [
           {
             "category": "input",
@@ -240,7 +251,7 @@
         ]
       },
       {
-        "heading": "Do you jump on Zoom, Skype, or other video calls? 🎥",
+        "heading": "How often do you call? 📞",
         "content": [
           {
             "category": "input",
@@ -251,41 +262,7 @@
                 {
                   "id": "1",
                   "icon": "/assets/icons/rarely.svg",
-                  "text": "Not really"
-                },
-                {
-                  "id": "2",
-                  "icon": "/assets/icons/sometimes.svg",
-                  "text": "Once a week"
-                },
-                {
-                  "id": "3",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Every day"
-                },
-                {
-                  "id": "4",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Multiple times a day"
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "heading": "Do you work or study from home often? 💼",
-        "content": [
-          {
-            "category": "input",
-            "type": "radio",
-            "data": {
-              "alignment": "column",
-              "radio": [
-                {
-                  "id": "1",
-                  "icon": "/assets/icons/rarely.svg",
-                  "text": "Not really"
+                  "text": "Rarely"
                 },
                 {
                   "id": "2",
@@ -295,12 +272,7 @@
                 {
                   "id": "3",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Quite a bit"
-                },
-                {
-                  "id": "4",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Always online"
+                  "text": "Always"
                 }
               ]
             }

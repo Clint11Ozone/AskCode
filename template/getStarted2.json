@@ -1,0 +1,41 @@
+{
+  "url": "https://wewewewe",
+  "progressbar": true,
+  "background": "#000",
+  "theme": "#000",
+  "name": "XYZ company",
+  "logo": "https://gdgdfgdfg",
+  "form": {
+    "initialSlide": [
+      {
+        "heading": "What type of deal are you looking for?",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/Sim.svg",
+                  "text": "Sim"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/Phone.svg",
+                  "text": "Phone"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/Internet.svg",
+                  "text": "Internet"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

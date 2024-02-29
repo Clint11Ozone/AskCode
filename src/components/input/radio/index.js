@@ -9,7 +9,6 @@ import brandQuery from "@/components/utils/GSMArenaApI/GSM";
 
 function Index({ radio, radioV }) {
   const [selectedCardID, setSelectedCardID] = useState();
-  const [phoneData, setPhoneData] = useState([]);
   const handleCardSelect = (id) => {
     setSelectedCardID(id);
   };
@@ -46,6 +45,7 @@ function Index({ radio, radioV }) {
               text={card?.text}
               desc={card?.desc}
               selected={selectedCardID === card?.id}
+              value={card?.value}
               onSelect={handleCardSelect}
             />
           ))}

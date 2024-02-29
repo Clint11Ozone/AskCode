@@ -34,7 +34,6 @@ const RadioCardLarge = ({ icon, text, selected, desc, id, onSelect }) => {
             )}
           </div>
           <div className="text-[1rem] font-bold">{text}</div>
-          {/* <div className="text-center text-[#9a9a9a] font-medium pt-[0.75rem] 2xl:pt-[1rem] text-[0.75rem] md:text-[0.9rem]">{desc}</div> */}
         </label>
       </div>
     </div>
