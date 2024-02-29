@@ -7,7 +7,7 @@ import Navigation from '@/components/utils/upperNavbar'
 import Input from "@/components/input/index"
 import Display from "@/components/display/index"
 
-const slide = ({ template, handlePrev, handleNext, slideIndex, slides, slide }) => {
+const slide = ({ template, handlePrev, handleNext, slideIndex, slides, slide, slide2, slide3 }) => {
     // console.log(slideIndex);
     return (
         <div className='flex  flex-col h-fillAvailable md:h-screen  items-center  bg-white '>
@@ -18,6 +18,28 @@ const slide = ({ template, handlePrev, handleNext, slideIndex, slides, slide }) 
             {/* <SubHeader subtitle2={template?.subtitle2} /> */}
             {
                 slide?.content?.map(element => {
+                    if (element?.category === "display") {
+                       return <Display element={element} />
+                    } else if (element?.category === "input") {
+                       return <Input element={element} />
+                    } else {
+                        console.log("not found");
+                    }
+                })
+            }
+            {
+                slide2?.content?.map(element => {
+                    if (element?.category === "display") {
+                       return <Display element={element} />
+                    } else if (element?.category === "input") {
+                       return <Input element={element} />
+                    } else {
+                        console.log("not found");
+                    }
+                })
+            }
+            {
+                slide3?.content?.map(element => {
                     if (element?.category === "display") {
                        return <Display element={element} />
                     } else if (element?.category === "input") {
