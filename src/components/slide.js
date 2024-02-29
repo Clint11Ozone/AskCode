@@ -7,11 +7,7 @@ import Navigation from '@/components/utils/upperNavbar'
 import Input from "@/components/input/index"
 import Display from "@/components/display/index"
 
-<<<<<<< HEAD
 const slide = ({ template, handlePrev, handleNext, slideIndex, slides, slide, slide2, slide3 }) => {
-=======
-const slide = ({ template, handlePrev, handleNext, slideIndex, slides, slide,  }) => {
->>>>>>> f24c10a8d23b976b75d6a90af05f1db397cbab0f
     // console.log(slideIndex);
     return (
         <div className='flex  flex-col h-fillAvailable md:h-screen  items-center  bg-white '>
