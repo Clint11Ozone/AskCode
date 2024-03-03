@@ -5,14 +5,13 @@ import { Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCube } from 
 import template from '@/../../template/getStarted';
 
 export default function Form() {
-    const [selectedOption, setSelectedOption] = useState(template.form.initialSlide); // Store the selected option
+    const [selectedOption, setSelectedOption] = useState(template.form.initialSlide);
     const [activeSlide, setActiveSlide] = useState(0);
-    const [slides, setSlides] = useState(template.form.initialSlide); // Initialize with default slides
-    const [isContinueClicked, setIsContinueClicked] = useState(false); // New state to track if continue has been clicked
+    const [slides, setSlides] = useState(template.form.initialSlide);
+    const [isContinueClicked, setIsContinueClicked] = useState(false);
 
     const sliderRef = useRef(null);
 
-    // Reset the swiper when slides change
     useEffect(() => {
         if (sliderRef.current) {
             // sliderRef.current.swiper.slideTo(0, 0);
@@ -26,8 +25,18 @@ export default function Form() {
 
     const handlePrev = useCallback(() => {
         if (!sliderRef.current) return;
-        sliderRef.current.swiper.slidePrev();
-    }, []);
+
+        if (sliderRef.current.swiper.activeIndex === 0) {
+            if (slides === template.form.initialSlide) {
+                // window.location.reload();
+            } else {
+                setSlides(template.form.initialSlide);
+                setIsContinueClicked(false);
+            }
+        } else {
+            sliderRef.current.swiper.slidePrev();
+        }
+    }, [slides]);
 
     const handleNext = useCallback(() => {
         if (!sliderRef.current) return;
@@ -43,12 +52,11 @@ export default function Form() {
                 newSlides = template.form.internetSlides;
                 break;
             default:
-                newSlides = template.form.initialSlide; // Default case
+                newSlides = template.form.initialSlide;
         }
         
-        setSlides(newSlides); // Update the slides state
-        setIsContinueClicked(true); // Set isContinueClicked to true
-        // Optionally, move to the next slide
+        setSlides(newSlides);
+        setIsContinueClicked(true);
         sliderRef.current.swiper.slideNext();
 
     }, [selectedOption]);
@@ -64,7 +72,7 @@ export default function Form() {
                             checked={selectedOption === '1'}
                             onChange={handleRadioChange}
                         />
-                        Option 1
+                        Sim
                     </label>
                     <label className="block mb-2">
                         <input
@@ -73,7 +81,7 @@ export default function Form() {
                             checked={selectedOption === '2'}
                             onChange={handleRadioChange}
                         />
-                        Option 2
+                        Phone
                     </label>
                     <label className="block mb-2">
                         <input
@@ -82,13 +90,13 @@ export default function Form() {
                             checked={selectedOption === '3'}
                             onChange={handleRadioChange}
                         />
-                        Option 3
+                        Internet
                     </label>
                 </div>
             )}
 
             <Swiper
-                key={slides.length} // Remount Swiper when slides change
+                key={slides.length}
                 ref={sliderRef}
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCube]}
                 spaceBetween={50}
@@ -112,5 +120,4 @@ export default function Form() {
             </Swiper>
         </div>
     );
-    
 }
