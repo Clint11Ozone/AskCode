@@ -9,6 +9,7 @@ export default function Form() {
     const [activeSlide, setActiveSlide] = useState(0);
     const [slides, setSlides] = useState(template.form.initialSlide);
     const [isContinueClicked, setIsContinueClicked] = useState(false);
+    const [userSelections, setUserSelections] = useState({});
 
     const sliderRef = useRef(null);
 
