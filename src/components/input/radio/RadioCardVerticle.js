@@ -2,29 +2,30 @@ import Image from "next/image";
 import Checkbox from "/public/assets/icons/drm2-checkbox.svg";
 import Link from "next/link";
 
-const RadioCardLarge = ({ icon, text, selected, desc, id, value,  onSelect }) => {
+const RadioCardLarge = ({icon,text,  selected, desc, id, value, onSelect,}) => {
   const selectedClass = selected
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
 
   const handleClick = () => {
     onSelect(id);
+    console.log("Selected Radio Button Text:", text);
   };
 
   return (
     <div className="items-center pb-[15px] flex flex-col">
       <div className="w-[340px] h-[70px] relative">
-        <input 
-          type="radio" 
-          id={id} 
+        <input
+          type="radio"
+          id={id}
           value={value}
-          name="radio-group" 
-          className="" 
+          name="radio-group"
+          className=""
           checked={selected}
-          onChange={handleClick} 
+          onChange={handleClick}
         />
         <label
-        onClick={handleClick}
+          onClick={handleClick}
           htmlFor={id}
           className={`option-card flex flex-row gap-6 items-center ${selectedClass} flex-grow rounded-[10px] py-4 pl-4 relative hover:border-[#5253f1] hover:border-[1px] transition-all duration-150 bg-white`}
         >

@@ -21,8 +21,17 @@ export default function Form() {
     }, [slides]);
 
     const handleRadioChange = useCallback((event) => {
+
+        // Save selections 
+        setUserSelections(prev => ({
+          ...prev,
+          [event.target.name]: event.target.value 
+        }));
+      
+        // Existing state update
         setSelectedOption(event.target.value);
-    }, []);
+      
+      }, []);
 
     const handlePrev = useCallback(() => {
         if (!sliderRef.current) return;
@@ -41,6 +50,13 @@ export default function Form() {
 
     const handleNext = useCallback(() => {
         if (!sliderRef.current) return;
+    
+        // Ensure that a valid option is selected before proceeding
+        if (!selectedOption || !['1', '2', '3'].includes(selectedOption)) {
+            console.log("Please select a valid option to continue.");
+            return;
+        }
+    
         let newSlides;
         switch (selectedOption) {
             case '1':
@@ -53,47 +69,54 @@ export default function Form() {
                 newSlides = template.form.internetSlides;
                 break;
             default:
-                newSlides = template.form.initialSlide;
+                // This default case should ideally never be reached due to the validation above
+                console.error("Invalid selection");
+                return;
         }
-        
+    
         setSlides(newSlides);
         setIsContinueClicked(true);
         sliderRef.current.swiper.slideNext();
-
     }, [selectedOption]);
+    
+    
 
+    const selectedClass = selectedOption
+    ? "border-[#5253f1] border-[1px]"
+    : "border-[#b8b8b8] border-[1px]";
     return (
         <div className="relative flex justify-center items-center min-h-screen">
             {!isContinueClicked && (
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
-                    <label className="block mb-2">
-                        <input
-                            type="radio"
-                            value="1"
-                            checked={selectedOption === '1'}
-                            onChange={handleRadioChange}
-                        />
-                        Sim
-                    </label>
-                    <label className="block mb-2">
-                        <input
-                            type="radio"
-                            value="2"
-                            checked={selectedOption === '2'}
-                            onChange={handleRadioChange}
-                        />
-                        Phone
-                    </label>
-                    <label className="block mb-2">
-                        <input
-                            type="radio"
-                            value="3"
-                            checked={selectedOption === '3'}
-                            onChange={handleRadioChange}
-                        />
-                        Internet
-                    </label>
-                </div>
+                <label className={`block rounded-xl w-[340px] h-[70px] mb-2 ${selectedOption === '1' ? "border-[#5253f1]" : "border-[#b8b8b8]"} border-2 hover:border-[#5253f1]`}>
+                    <input
+                        type="radio"
+                        value="1"
+                        checked={selectedOption === '1'}
+                        onChange={handleRadioChange}
+                    />
+                    Sim
+                </label>
+                <label className={`block rounded-xl w-[340px] h-[70px] mb-2 ${selectedOption === '2' ? "border-[#5253f1]" : "border-[#b8b8b8]"} border-2 hover:border-[#5253f1]`}>
+                    <input
+                        type="radio"
+                        value="2"
+                        checked={selectedOption === '2'}
+                        onChange={handleRadioChange}
+                    />
+                    <div className="text-[1rem] font-bold">Phone</div>
+                </label>
+                <label className={`block rounded-xl w-[340px] h-[70px] mb-2 ${selectedOption === '3' ? "border-[#5253f1]" : "border-[#b8b8b8]"} border-2 hover:border-[#5253f1]`}>
+                    <input
+                        type="radio"
+                        value="3"
+                        checked={selectedOption === '3'}
+                        onChange={handleRadioChange}
+                    />
+                    Internet
+                </label>
+            </div>
+            
             )}
 
             <Swiper
@@ -114,7 +137,7 @@ export default function Form() {
                             handleNext={handleNext} 
                             slideIndex={activeSlide} 
                             slides={slides} 
-                            slide={slides[activeSlide]} 
+                            slide={slides[activeSlide]}
                         />
                     </SwiperSlide>
                 ))}

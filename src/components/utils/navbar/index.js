@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Navbar = ({ handlePrev, handleNext, slideIndex = 0, slides }) => {
+const Navbar = ({ handlePrev, selectedOption, handleNext, slideIndex = 0, slides }) => {
   // State to manage input values
   const [inputValues, setInputValues] = useState({
     name: "c",

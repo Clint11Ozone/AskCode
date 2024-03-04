@@ -11,6 +11,7 @@ const slide = ({
   template,
   handlePrev,
   handleNext,
+  selectedOption,
   slideIndex,
   slides,
   slide,

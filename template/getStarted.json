@@ -63,6 +63,60 @@
             }
           }
         ]
+      },
+      {
+        "heading": "What is yourzzzz favorite  brand? 🤩",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "grid",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                },
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/option-camera.svg",
+                  "text": "Camera"
+                },
+                {
+                  "id": "4",
+                  "icon": "/assets/icons/option-casing.svg",
+                  "text": "Casing"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/option-bluetooth.svg",
+                  "text": "Bluetooth"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/option-water.svg",
+                  "text": "Water Damage"
+                },
+                {
+                  "id": "7",
+                  "icon": "/assets/icons/option-audio.svg",
+                  "text": "Audio during calls"
+                },
+                {
+                  "id": "8",
+                  "icon": "/assets/icons/option-software.svg",
+                  "text": "Software"
+                }
+              ]
+            }
+          }
+        ]
       }
     ],
     "simSlides": [
