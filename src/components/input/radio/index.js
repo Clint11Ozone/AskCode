@@ -36,7 +36,8 @@ function Index({ radio, radioV }) {
   } else if (radio?.alignment == "column") {
     return (
       <>
-        <form className=" px-[2rem] grid grid-cols-1 mt-[1rem] gap-3 mx-4  2xl:mt-[3rem] md:w-[40rem] md:mb-[10px] pb-[0px] ">
+      <div className="overflow-y-scroll">
+        <form className="  grid grid-cols-1  max-h-[700px] gap-3 mx-4  2xl:mt-[3rem] md:w-[40rem] md:mb-[10px]">
           {radio?.radio?.map((card) => (
             <RadioCardVerticle
               key={card?.id}
@@ -50,6 +51,7 @@ function Index({ radio, radioV }) {
             />
           ))}
         </form>
+        </div>
       </>
     );
   } else if (radio?.alignment == "GSMPhone") {
@@ -74,7 +76,7 @@ function Index({ radio, radioV }) {
     return (
       <>
         <div className="overflow-y-scroll">
-          <form className="grid grid-cols-2 gap-x-3  gap-y-5 p-1">
+          <form className="grid grid-cols-2 gap-x-3 gap-y-5 p-[1px]">
             {radio?.radio?.map((card) => (
               <Brand
                 key={card?.id}

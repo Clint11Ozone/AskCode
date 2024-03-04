@@ -20,7 +20,7 @@ const RadioCardLarge = ({icon,text,  selected, desc, id, value, onSelect,}) => {
           id={id}
           value={value}
           name="radio-group"
-          className=""
+          className="sr-only" // Hide the input visually but keep it accessible
           checked={selected}
           onChange={handleClick}
         />
