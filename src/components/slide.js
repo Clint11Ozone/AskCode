@@ -20,7 +20,7 @@ const slide = ({
 }) => {
   // console.log(slideIndex);
   return (
-    <div className="flex  flex-col h-fillAvailable md:h-screen  items-center  bg-white ">
+    <div className="flex  flex-col relative h-fillAvailable md:h-screen  items-center  bg-white ">
       {/* <ProgressBar currentSlide={slideIndex} slides={slides} /> */}
       <Navigation
         handlePrev={handlePrev}

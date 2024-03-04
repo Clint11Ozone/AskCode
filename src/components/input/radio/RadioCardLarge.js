@@ -14,10 +14,10 @@ const RadioCardLarge = ({ icon, text, selected, desc, id, onSelect }) => {
 
   return (
     <div className=" items-center flex  flex-col ">
-      <div className=" w-[165px]  h-[111px] mx-[3px]  relative ">
+      <div className=" w-[165px]  h-[60px] mx-[3px]  relative ">
         <label
           onClick={handleClick}
-          className={`option-card flex flex-col items-center ${selectedClass} flex-grow rounded-[10px] py-4 relative hover:border-[#5253f1] hover:border-[1px] transition-all duration-150 bg-white`}
+          className={`option-card flex flex-col items-center ${selectedClass} flex-grow rounded-[10px] py-0 relative hover:border-[#5253f1] hover:border-[1px] transition-all duration-150 bg-white`}
         >
           <div className="w-5 h-5 border-[1px] rounded-full absolute top-2 right-2 hover:border-[#5253f1] hover:border-[1px]">
             {selected && <Image src='assets/icons/drm2-checkbox.svg' width={30} height={30} alt="ico" />}
