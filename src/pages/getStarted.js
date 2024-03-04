@@ -10,7 +10,8 @@ import {
   EffectCube,
 } from "swiper/modules";
 import Image from "next/image";
-import template from "@/../../template/getStarted";
+import tp from "@/../../template/getStarted";
+import template from "#/template/getStarted"
 import Checkbox from "/public/assets/icons/drm2-checkbox.svg";
 
 export default function Form() {

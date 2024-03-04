@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import template from "@/../../template/roadcare";
+import template from "#/template/roadcare"
 
 import Slide from "@/components/slide";
 import { Swiper, SwiperSlide } from "swiper/react";
