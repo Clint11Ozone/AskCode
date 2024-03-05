@@ -31,25 +31,22 @@ const [number, setNumber] = useState("");
   const isButtonDisabled =
     !name || !email || !surName;
 
-  const navigateToAnotherPage = () => {
-    // Use window.location to change the URL
-    window.location.href = "doubleD  ";
-  };
+  
   return (
-    <div className="w-full min-h-screen bg-[#5253F1]  flex flex-col items-center ">
+    <div className="w-full md:h-screen h-fillAvailable bg-[#5253F1]  flex flex-col items-center ">
 
 
       <div>
         <img
           src={"/assets/icons/logo.svg"}
-          className="mt-[15px] mb-[45px]"
+          className=" mb-[15px] "
           alt="Logo"
         />
       </div>
 
 
       <div className="relative w-full">
-        <h1 className="text-[65px] absolute left-[30px] ">🥳</h1>
+        <h1 className="text-[65px] absolute left-[30px] md:left-[500px] ">🥳</h1>
       </div>
 
 
@@ -64,7 +61,7 @@ const [number, setNumber] = useState("");
 
 
       <div className="items-center flex flex-col">
-        <form className="flex mt-[40px] gap-2.5">
+        <form className="flex mt-[25px] gap-2.5">
           <input
             type="text"
             value={name}
@@ -102,7 +99,7 @@ const [number, setNumber] = useState("");
         </form>
       </div>
 
-      <div className="py-[20px] text-[white]">
+      <div className="py-[10px] text-[white]">
       We promise we wont spam!  <a
           className="underline"
           href="https://example.com"
@@ -113,7 +110,7 @@ const [number, setNumber] = useState("");
         </a>
       </div>
 
-      <footer className="bottom-0 w-full pb-[30px] justify-center">
+      <footer className="bottom-0 w-full pb-[px] justify-center">
         <div className="flex justify-center space-x-4 max-w-[40rem] mx-auto">
           <button
             className={`bg-[#8687F5] text-white py-[1rem] lg:py-[1.5rem] px-4 rounded-full h-[60px] w-[340px] flex items-center justify-center ${
