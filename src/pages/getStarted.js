@@ -11,8 +11,11 @@ import {
 } from "swiper/modules";
 import Image from "next/image";
 import tp from "@/../../template/getStarted";
-import template from "#/template/getStarted"
+import template from "#/template/getStarted";
 import Checkbox from "/public/assets/icons/drm2-checkbox.svg";
+import sim from "#/public/assets/icons/Sim.svg";
+import phone from "#/public/assets/icons/Phone.svg"
+import internet from "#/public/assets/icons/Internet.svg"
 
 export default function Form() {
   const [selectedOption, setSelectedOption] = useState(
@@ -98,10 +101,20 @@ export default function Form() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
           {/* Label for "Sim" */}
           <label
-            className={`block rounded-xl w-[340px] h-[70px] mb-2 p-1 ${
+            className={` flex rounded-xl w-[340px] h-[70px] mb-2 p-1 ${
               selectedOption === "1" ? "border-[#5253f1]" : "border-[#b8b8b8]"
             } border-2 hover:border-[#5253f1]`}
           >
+            <div className="relative h-[2rem] w-[2rem] ml-[15px] my-3 ">
+              {sim && (
+                <Image
+                  src={sim}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
+                />
+              )}
+            </div>
             <input
               type="radio"
               value="1"
@@ -110,21 +123,31 @@ export default function Form() {
               onChange={handleRadioChange}
             />
             <div className="flex items-center justify-between">
-              <div className="text-[1rem] font-bold mt-4 ml-[65px]">Sim</div>
-              {selectedOption === "1" && (
-                <div className="w-5 h-5 mt-[-20px]">
-                  <Image src={Checkbox} alt="Selected checkbox for Sim" />
-                </div>
-              )}
+              <div className="text-[1rem] font-bold  ml-[20px]">Sim</div>
             </div>
+            {selectedOption === "1" && (
+              <div className="w-5 h-5 ml-auto">
+                <Image src={Checkbox} alt="Selected checkbox for Sim" />
+              </div>
+            )}
           </label>
 
           {/* Label for "Phone" */}
           <label
-            className={`block rounded-xl w-[340px] h-[70px] p-1 mb-2 ${
+            className={` flex rounded-xl w-[340px] h-[70px] mb-2 p-1 ${
               selectedOption === "2" ? "border-[#5253f1]" : "border-[#b8b8b8]"
             } border-2 hover:border-[#5253f1]`}
           >
+            <div className="relative h-[2rem] w-[2rem] ml-[15px] my-3 ">
+              {phone && (
+                <Image
+                  src={phone}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
+                />
+              )}
+            </div>
             <input
               type="radio"
               value="2"
@@ -133,21 +156,31 @@ export default function Form() {
               onChange={handleRadioChange}
             />
             <div className="flex items-center justify-between">
-              <div className="text-[1rem] mt-4 ml-[65px] font-bold">Phone</div>
-              {selectedOption === "2" && (
-                <div className="w-5 h-5 mt-[-20px]">
-                  <Image src={Checkbox} alt="Selected checkbox for Phone" />
-                </div>
-              )}
+              <div className="text-[1rem] font-bold  ml-[20px]">Phone</div>
             </div>
+            {selectedOption === "2" && (
+              <div className="w-5 h-5 ml-auto">
+                <Image src={Checkbox} alt="Selected checkbox for Sim" />
+              </div>
+            )}
           </label>
 
           {/* Label for "Internet" */}
           <label
-            className={`block rounded-xl w-[340px] h-[70px] mb-2 p-1 ${
+            className={` flex rounded-xl w-[340px] h-[70px] mb-2 p-1 ${
               selectedOption === "3" ? "border-[#5253f1]" : "border-[#b8b8b8]"
             } border-2 hover:border-[#5253f1]`}
           >
+            <div className="relative h-[2rem] w-[2rem] ml-[15px] my-3 ">
+              {internet && (
+                <Image
+                  src={internet}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
+                />
+              )}
+            </div>
             <input
               type="radio"
               value="3"
@@ -156,15 +189,13 @@ export default function Form() {
               onChange={handleRadioChange}
             />
             <div className="flex items-center justify-between">
-              <div className="text-[1rem] font-bold mt-4 ml-[65px] mt-4">
-                Internet
-              </div>
-              {selectedOption === "3" && (
-                <div className="w-5 h-5 mt-[-20px]">
-                  <Image src={Checkbox} alt="Selected checkbox for Internet" />
-                </div>
-              )}
+              <div className="text-[1rem] font-bold  ml-[20px]">Internet</div>
             </div>
+            {selectedOption === "3" && (
+              <div className="w-5 h-5 ml-auto">
+                <Image src={Checkbox} alt="Selected checkbox for Sim" />
+              </div>
+            )}
           </label>
         </div>
       )}
