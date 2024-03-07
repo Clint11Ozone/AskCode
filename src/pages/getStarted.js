@@ -16,6 +16,10 @@ import Checkbox from "/public/assets/icons/drm2-checkbox.svg";
 import sim from "#/public/assets/icons/Sim.svg";
 import phone from "#/public/assets/icons/Phone.svg"
 import internet from "#/public/assets/icons/Internet.svg"
+import { UserSelectionContext } from '@/components/utils/context/context';
+import { useContext } from 'react';
+
+
 
 export default function Form() {
   const [selectedOption, setSelectedOption] = useState(
@@ -40,9 +44,9 @@ export default function Form() {
     setUserSelections((prev) => ({
       ...prev,
       [event.target.name]: event.target.value,
-    }));
-
-    // Existing state update
+    }));  
+    // Update the selected option in the context
+    const { setSelectedOption } = useContext(UserSelectionContext);
     setSelectedOption(event.target.value);
   }, []);
 
@@ -226,6 +230,7 @@ export default function Form() {
               slideIndex={activeSlide}
               slides={slides}
               slide={slides[activeSlide]}
+              selectedOption={selectedOption} // Pass the selectedOption value as a prop
             />
           </SwiperSlide>
         ))}

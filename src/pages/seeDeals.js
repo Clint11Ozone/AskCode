@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext} from "react";
 import Header from "@/components/utils/header";
+import context from '@/components/utils/context/context'; // Import the context
+
 
 function Encrypt({
   firstName,
@@ -27,6 +29,26 @@ function Encrypt({
   };
 
   const isButtonDisabled = !name || !email || !surName;
+
+  const { selectedOption } = useContext(UserSelectionContext);
+
+  const handleNextPush = () => {
+    switch (selectedOption) {
+      case '1':
+        window.location.href = 'https://www.mtn.com';
+        break;
+      case '2':
+        window.location.href = 'https://www.apple.com';
+        break;
+      case '3':
+        window.location.href = 'https://www.fibre.com';
+        break;
+      default:
+        // Handle default case or show an error
+        console.log('No selection made or unknown selection');
+    }
+  };
+
 
   return (
 <div className=" h-fillAvailable bg-[#5253F1] flex flex-col items-center ">
@@ -109,7 +131,7 @@ function Encrypt({
             className={`bg-[#8687F5] text-white py-[1rem] lg:py-[1.5rem] px-4 rounded-full h-[60px] w-[340px] flex items-center justify-center ${
               isButtonDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
-            onClick={handleNext}
+            onClick={handleNextPush}
             disabled={isButtonDisabled}
             style={{ opacity: isButtonDisabled ? 0.5 : 1 }}
           >

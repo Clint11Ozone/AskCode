@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Header from "@/components/utils/header";
+import context from '@/components/utils/context/context'; // Import the context
+
 
 function Encrypt({
   firstName,
@@ -27,6 +29,25 @@ function Encrypt({
   };
 
   const isButtonDisabled = !name || !email || !surName;
+
+  // context
+  const { userSelection } = useContext(UserSelectionContext);
+  const [selectionFromContext, setSelectionFromContext] = useState('');
+  useEffect(() => {
+    // Listener for the context event
+    context.on('selection', (selection) => {
+      setSelectionFromContext(selection);
+    });
+
+    // Cleanup the listener when the component unmounts
+    return () => {
+      context.removeAllListeners('selection');
+    };
+  }, []);
+
+
+
+
 
   return (
 

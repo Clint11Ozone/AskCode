@@ -64,6 +64,8 @@ const slide = ({
         handleNext={handleNext}
         slideIndex={slideIndex}
         slides={slides}
+        selectedOption={selectedOption} // Pass the selectedOption value as a prop
+        navigateToAnotherPage={() => navigateToAnotherPage(selectedOption)} // Pass the selectedOption as a parameter
       />
     </div>
   );
