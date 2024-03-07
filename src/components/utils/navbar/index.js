@@ -7,7 +7,6 @@ import Idkyet from "../../display/encrypt/encrypt"
 import { Link } from "react-router-dom";
 
 
-
 const Navbar = ({ handlePrev, selectedOption, handleNext, slideIndex = 0, slides }) => {
   // State to manage input values
   const [inputValues, setInputValues] = useState({
@@ -30,7 +29,6 @@ const Navbar = ({ handlePrev, selectedOption, handleNext, slideIndex = 0, slides
       
     };
   
-
   return (
     <footer className=" mb-1  w-full p-10 md:p-9 justify-center">
       <div className="flex justify-center space-x-4 pt-[-40px] max-w-[40rem] mx-auto">

@@ -14,8 +14,8 @@ function Encrypt({
   const [isValid, setIsValid] = useState(true);
   const [name, setName] = useState("");
   const [surName, setSurname] = useState("");
-const [email, setEmail] = useState("");
-const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
 
   const handleEmailChange = (e) => {
     const enteredEmail = e.target.value;
@@ -26,39 +26,31 @@ const [number, setNumber] = useState("");
     setIsValid(emailRegex.test(enteredEmail));
   };
 
-  
+  const isButtonDisabled = !name || !email || !surName;
 
-  const isButtonDisabled =
-    !name || !email || !surName;
-
-  
   return (
-    <div className="w-full md:h-screen h-fillAvailable bg-[#5253F1]  flex flex-col items-center ">
-
-
+<div className=" h-fillAvailable bg-[#5253F1] flex flex-col items-center ">
+      
       <div>
         <img
-          src={"/assets/icons/logo.svg"}
+          src={"/assets/icons/LogoW.svg"}
           className=" mb-[15px] "
           alt="Logo"
         />
       </div>
 
-
-      <div className="relative w-full">
-        <h1 className="text-[65px] absolute left-[30px] md:left-[500px] ">🥳</h1>
+      <div className=" w-[370px]">
+        <h1 className="text-[65px] md:mt-[30px] pl-[30px] ">🥳</h1>
       </div>
 
-
       <div className="">
-        <h1 className="text-[48px]/[49px] text-[white] text-bold text-white mt-[95px] w-[310px] ">
+        <h1 className="text-[48px]/[49px] text-[white] text-bold md:mt-[45px] w-[310px] ">
           We’ve found the perfect deal
         </h1>
-        <h1 className="text-xl text-[white] text-normal text-white mt-[20px] w-[230px] ">
+        <h1 className="text-xl text-normal text-white mt-[20px] w-[230px] ">
           The best deals with 20GB, 200 talk and 400 SMS are ready for you!
         </h1>
       </div>
-
 
       <div className="items-center flex flex-col">
         <form className="flex mt-[25px] gap-2.5">
@@ -100,7 +92,8 @@ const [number, setNumber] = useState("");
       </div>
 
       <div className="py-[10px] text-[white]">
-      We promise we wont spam!  <a
+        We promise we wont spam!{" "}
+        <a
           className="underline"
           href="https://example.com"
           target="_blank"
@@ -110,7 +103,7 @@ const [number, setNumber] = useState("");
         </a>
       </div>
 
-      <footer className="bottom-0 w-full pb-[px] justify-center">
+      <footer className="bottom-0 w-full  justify-center">
         <div className="flex justify-center space-x-4 max-w-[40rem] mx-auto">
           <button
             className={`bg-[#8687F5] text-white py-[1rem] lg:py-[1.5rem] px-4 rounded-full h-[60px] w-[340px] flex items-center justify-center ${
@@ -124,8 +117,6 @@ const [number, setNumber] = useState("");
           </button>
         </div>
       </footer>
-
-
     </div>
   );
 }
