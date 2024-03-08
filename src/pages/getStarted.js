@@ -16,10 +16,6 @@ import Checkbox from "/public/assets/icons/drm2-checkbox.svg";
 import sim from "#/public/assets/icons/Sim.svg";
 import phone from "#/public/assets/icons/Phone.svg"
 import internet from "#/public/assets/icons/Internet.svg"
-import { UserSelectionContext } from '@/components/utils/context/context';
-import { useContext } from 'react';
-
-
 
 export default function Form() {
   const [selectedOption, setSelectedOption] = useState(
@@ -44,10 +40,11 @@ export default function Form() {
     setUserSelections((prev) => ({
       ...prev,
       [event.target.name]: event.target.value,
-    }));  
-    // Update the selected option in the context
-    const { setSelectedOption } = useContext(UserSelectionContext);
+    }));
+
+    // Existing state update
     setSelectedOption(event.target.value);
+    localStorage.setItem("userSelection", event.target.value);
   }, []);
 
   const handlePrev = useCallback(() => {
@@ -100,9 +97,9 @@ export default function Form() {
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
   return (
-    <div className="relative flex justify-center items-center h-fillAvailable">
+    <div className="relative flex justify-center items-center md:h-screen h-fillAvailable">
       {!isContinueClicked && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
+        <div className="absolute top-1/2 left-1/2 transform md:pb-[100px] -translate-x-1/2 -translate-y-1/2 text-center z-10">
           {/* Label for "Sim" */}
           <label
             className={` flex rounded-xl w-[340px] h-[70px] mb-2 p-1 ${
@@ -127,7 +124,7 @@ export default function Form() {
               onChange={handleRadioChange}
             />
             <div className="flex items-center justify-between">
-              <div className="text-[1rem] font-bold  ml-[20px]">Sim</div>
+              <div className="text-[1rem] font-bold  ml-[15px]">Sim</div>
             </div>
             {selectedOption === "1" && (
               <div className="w-5 h-5 ml-auto">
@@ -230,7 +227,6 @@ export default function Form() {
               slideIndex={activeSlide}
               slides={slides}
               slide={slides[activeSlide]}
-              selectedOption={selectedOption} // Pass the selectedOption value as a prop
             />
           </SwiperSlide>
         ))}

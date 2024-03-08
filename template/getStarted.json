@@ -8,61 +8,7 @@
   "form": {
     "initialSlide": [
       {
-        "heading": "what type of deal aree you looking for?"
-      },
-      {
-        "heading": "What is yourzzzz favorite  brand? 🤩",
-        "content": [
-          {
-            "category": "input",
-            "type": "radio",
-            "data": {
-              "alignment": "grid",
-              "radio": [
-                {
-                  "id": "1",
-                  "icon": "/assets/icons/option-software.svg",
-                  "text": "Software"
-                },
-                {
-                  "id": "2",
-                  "icon": "/assets/icons/option-audio.svg",
-                  "text": "Audio"
-                },
-                {
-                  "id": "3",
-                  "icon": "/assets/icons/option-camera.svg",
-                  "text": "Camera"
-                },
-                {
-                  "id": "4",
-                  "icon": "/assets/icons/option-casing.svg",
-                  "text": "Casing"
-                },
-                {
-                  "id": "5",
-                  "icon": "/assets/icons/option-bluetooth.svg",
-                  "text": "Bluetooth"
-                },
-                {
-                  "id": "6",
-                  "icon": "/assets/icons/option-water.svg",
-                  "text": "Water Damage"
-                },
-                {
-                  "id": "7",
-                  "icon": "/assets/icons/option-audio.svg",
-                  "text": "Audio during calls"
-                },
-                {
-                  "id": "8",
-                  "icon": "/assets/icons/option-software.svg",
-                  "text": "Software"
-                }
-              ]
-            }
-          }
-        ]
+        "heading": "What type of deal aree you looking for?"
       },
       {
         "heading": "What is yourzzzz favorite  brand? 🤩",
@@ -200,6 +146,11 @@
                   "id": "5",
                   "icon": "/assets/icons/Huawei.svg",
                   "text": "Huawei"
+                },
+                {
+                  "id": "6",
+                  "icon": "/assets/icons/Samsung.svg",
+                  "text": "Samsung"
                 }
               ]
             }
@@ -382,6 +333,11 @@
                   "id": "5",
                   "icon": "/assets/icons/Huawei.svg",
                   "text": "Huawei"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/Samsung.svg",
+                  "text": "Samsung"
                 }
               ]
             }
@@ -532,33 +488,43 @@
         ]
       },
       {
-        "heading": "How much Netflix or YouTube do you watch? 🍿",
+        "heading": "What is your favorite  brand? 🤩",
         "content": [
           {
             "category": "input",
             "type": "radio",
             "data": {
-              "alignment": "column",
+              "alignment": "GSMBrand",
               "radio": [
                 {
                   "id": "1",
-                  "icon": "/assets/icons/rarely.svg",
-                  "text": "Never"
+                  "icon": "/assets/icons/Apple.svg",
+                  "text": "Apple"
                 },
                 {
                   "id": "2",
-                  "icon": "/assets/icons/sometimes.svg",
-                  "text": "Sometimes"
+                  "icon": "/assets/icons/Sony.svg",
+                  "text": "Sony"
                 },
                 {
                   "id": "3",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Multiple times per week"
+                  "icon": "/assets/icons/Oppo.svg",
+                  "text": "Oppo"
                 },
                 {
                   "id": "4",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Every day"
+                  "icon": "/assets/icons/Google.svg",
+                  "text": "Google"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/Huawei.svg",
+                  "text": "Huawei"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/Samsung.svg",
+                  "text": "Samsung"
                 }
               ]
             }

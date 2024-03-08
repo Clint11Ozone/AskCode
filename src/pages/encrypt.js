@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Header from "@/components/utils/header";
-import context from '@/components/utils/context/context'; // Import the context
 
 
 function Encrypt({
@@ -30,24 +29,20 @@ function Encrypt({
 
   const isButtonDisabled = !name || !email || !surName;
 
-  // context
-  const { userSelection } = useContext(UserSelectionContext);
-  const [selectionFromContext, setSelectionFromContext] = useState('');
-  useEffect(() => {
-    // Listener for the context event
-    context.on('selection', (selection) => {
-      setSelectionFromContext(selection);
-    });
+ 
+  const handleClick = () => {
+    // Retrieve the selection from localStorage
+    const userSelection = localStorage.getItem("userSelection");
 
-    // Cleanup the listener when the component unmounts
-    return () => {
-      context.removeAllListeners('selection');
-    };
-  }, []);
-
-
-
-
+    // Redirect based on the user selection
+    if (userSelection === "1") {
+      window.location.href = "https://www.sim.com";
+    } else if (userSelection === "2") {
+      window.location.href = "https://www.phone.com";
+    } else if (userSelection === "3") {
+      window.location.href = "https://www.internet.com";
+    }
+  };
 
   return (
 
@@ -131,7 +126,7 @@ function Encrypt({
             className={`bg-[#8687F5] text-white py-[1rem] lg:py-[1.5rem] px-4 rounded-full h-[60px] w-[340px] flex items-center justify-center ${
               isButtonDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
-            onClick={handleNext}
+            onClick={handleClick}
             disabled={isButtonDisabled}
             style={{ opacity: isButtonDisabled ? 0.5 : 1 }}
           >

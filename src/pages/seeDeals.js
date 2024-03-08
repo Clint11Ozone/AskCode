@@ -1,6 +1,5 @@
-import React, { useState, useContext} from "react";
+import React, { useState } from "react";
 import Header from "@/components/utils/header";
-import context from '@/components/utils/context/context'; // Import the context
 
 
 function Encrypt({
@@ -30,28 +29,24 @@ function Encrypt({
 
   const isButtonDisabled = !name || !email || !surName;
 
-  const { selectedOption } = useContext(UserSelectionContext);
+ 
+  const handleClick = () => {
+    // Retrieve the selection from localStorage
+    const userSelection = localStorage.getItem("userSelection");
 
-  const handleNextPush = () => {
-    switch (selectedOption) {
-      case '1':
-        window.location.href = 'https://www.mtn.com';
-        break;
-      case '2':
-        window.location.href = 'https://www.apple.com';
-        break;
-      case '3':
-        window.location.href = 'https://www.fibre.com';
-        break;
-      default:
-        // Handle default case or show an error
-        console.log('No selection made or unknown selection');
+    // Redirect based on the user selection
+    if (userSelection === "1") {
+      window.location.href = "https://allplans.co.za/sim-only?data=%7Bdata%7D?talk=%7Btalk%7D";
+    } else if (userSelection === "2") {
+      window.location.href = "https://allplans.co.za/mobiles/brands/apple";
+    } else if (userSelection === "3") {
+      window.location.href = "https://allplans.co.za/internet/lte";
     }
   };
 
-
   return (
-<div className=" h-fillAvailable bg-[#5253F1] flex flex-col items-center ">
+
+    <div className="w-full md:h-screen h-fillAvailable bg-[#5253F1] flex flex-col items-center">
       
       <div>
         <img
@@ -61,12 +56,12 @@ function Encrypt({
         />
       </div>
 
-      <div className=" w-[370px]">
-        <h1 className="text-[65px] md:mt-[30px] pl-[30px] ">🥳</h1>
+      <div className="w-[380px]">
+      <h1 className="text-[65px] ml-[30px]">🥳</h1>
       </div>
 
       <div className="">
-        <h1 className="text-[48px]/[49px] text-[white] text-bold md:mt-[45px] w-[310px] ">
+        <h1 className="text-[43px]/[49px] text-[white] text-bold md:mt-[25px] w-[310px] ">
           We’ve found the perfect deal
         </h1>
         <h1 className="text-xl text-normal text-white mt-[20px] w-[230px] ">
@@ -131,7 +126,7 @@ function Encrypt({
             className={`bg-[#8687F5] text-white py-[1rem] lg:py-[1.5rem] px-4 rounded-full h-[60px] w-[340px] flex items-center justify-center ${
               isButtonDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
-            onClick={handleNextPush}
+            onClick={handleClick}
             disabled={isButtonDisabled}
             style={{ opacity: isButtonDisabled ? 0.5 : 1 }}
           >
@@ -139,6 +134,7 @@ function Encrypt({
           </button>
         </div>
       </footer>
+
     </div>
   );
 }
