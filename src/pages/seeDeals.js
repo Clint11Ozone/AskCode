@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "@/components/utils/header";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import confetti from 'canvas-confetti';
+
 
 
 function Encrypt({
@@ -29,14 +32,14 @@ function Encrypt({
 
   const isButtonDisabled = !name || !email || !surName;
 
- 
   const handleClick = () => {
     // Retrieve the selection from localStorage
     const userSelection = localStorage.getItem("userSelection");
 
     // Redirect based on the user selection
     if (userSelection === "1") {
-      window.location.href = "https://allplans.co.za/sim-only?data=%7Bdata%7D?talk=%7Btalk%7D";
+      window.location.href =
+        "https://allplans.co.za/sim-only?data=%7Bdata%7D?talk=%7Btalk%7D";
     } else if (userSelection === "2") {
       window.location.href = "https://allplans.co.za/mobiles/brands/apple";
     } else if (userSelection === "3") {
@@ -44,20 +47,30 @@ function Encrypt({
     }
   };
 
-  return (
+  useEffect(() => {
+    // Trigger confetti on component mount
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  }, []);
 
-    <div className="w-full md:h-screen h-fillAvailable bg-[#5253F1] flex flex-col items-center">
-      
+
+  return (
+    <div className="w-full md:h-screen min-h-screen h-fillAvailable bg-[#5253F1] flex flex-col items-center">
       <div>
         <img
           src={"/assets/icons/LogoW.svg"}
-          className=" mb-[15px] "
+          className=" my-[15px] "
+          height={30} width={120}
+          
           alt="Logo"
         />
       </div>
 
       <div className="w-[380px]">
-      <h1 className="text-[65px] ml-[30px]">🥳</h1>
+        <h1 className="text-[65px] ml-[30px]">🥳</h1>
       </div>
 
       <div className="">
@@ -108,33 +121,48 @@ function Encrypt({
         </form>
       </div>
 
-      <div className="py-[10px] text-[white]">
-        We promise we wont spam!{" "}
-        <a
-          className="underline"
-          href="https://example.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          privacy policy
-        </a>
+      <div className="gap-4  mr-[00px] flex flex-row py-[10px] text-[white] ">
+        <div className="flex items-center space-x-2">
+          <img
+            src={"/assets/icons/ShieldWhite.svg"}
+            width="16px"
+            className="mt-1"
+            alt="Logo"
+          />
+          <div className="flex flex-row items-center space-x-2">
+            <h1 className="text-xs">We promise we won't spam!</h1>
+            <a
+              className="underline text-xs"
+              href="https://example.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              privacy policy
+            </a>
+          </div>
+        </div>
       </div>
 
       <footer className="bottom-0 w-full  justify-center">
         <div className="flex justify-center space-x-4 max-w-[40rem] mx-auto">
           <button
-            className={`bg-[#8687F5] text-white py-[1rem] lg:py-[1.5rem] px-4 rounded-full h-[60px] w-[340px] flex items-center justify-center ${
+            className={`bg-[#8687F5] text-white py-[1rem] lg:py-[1.5rem] mt-auto px-4 rounded-full h-[60px] w-[340px] flex items-center justify-center ${
               isButtonDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
             onClick={handleClick}
             disabled={isButtonDisabled}
             style={{ opacity: isButtonDisabled ? 0.5 : 1 }}
           >
-            <span className="mr-1">see your deals</span>{" "}
+            <span className="mr-1 text-black">see your deals</span>{" "}
+            <img
+            src={"/assets/icons/arrow-right.svg"}
+            width="16px"
+            className="mt-1"
+            alt="Logo"
+          />
           </button>
         </div>
       </footer>
-
     </div>
   );
 }

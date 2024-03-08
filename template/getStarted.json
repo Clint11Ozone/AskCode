@@ -335,7 +335,7 @@
                   "text": "Huawei"
                 },
                 {
-                  "id": "5",
+                  "id": "6",
                   "icon": "/assets/icons/Samsung.svg",
                   "text": "Samsung"
                 }
@@ -428,7 +428,7 @@
                 },
                 {
                   "id": "2",
-                  "icon": "/assets/icons/Phone2.svg",
+                  "icon": "/assets/icons/Phone.svg",
                   "text": "New phone"
                 },
                 {
@@ -522,7 +522,7 @@
                   "text": "Huawei"
                 },
                 {
-                  "id": "5",
+                  "id": "6",
                   "icon": "/assets/icons/Samsung.svg",
                   "text": "Samsung"
                 }

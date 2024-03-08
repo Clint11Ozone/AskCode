@@ -97,7 +97,7 @@ export default function Form() {
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
   return (
-    <div className="relative flex justify-center items-center md:h-screen h-fillAvailable">
+    <div className=" flex justify-center items-center h-">
       {!isContinueClicked && (
         <div className="absolute top-1/2 left-1/2 transform md:pb-[100px] -translate-x-1/2 -translate-y-1/2 text-center z-10">
           {/* Label for "Sim" */}
