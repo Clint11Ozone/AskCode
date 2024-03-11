@@ -2,16 +2,27 @@ import Image from "next/image";
 import Checkbox from "/public/assets/icons/drm2-checkbox.svg";
 import Link from "next/link";
 
-const RadioCardLarge = ({icon,text,  selected, desc, id, value, onSelect,}) => {
+const RadioCardLarge = ({
+  icon,
+  text,
+  selected,
+  desc,
+  id,
+  value,
+  onSelect,
+}) => {
   const selectedClass = selected
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
 
   const handleClick = () => {
-    onSelect(id);
+    if (!selected) {
+      onSelect(id);
+    }
     console.log("Selected Radio Button Text:", text);
+    localStorage.setItem(value, id);
   };
-
+  /*tabnine Can you explain the logic behind this code block? */
   return (
     <div className="items-center pb-[15px] flex flex-col">
       <div className="w-[340px] h-[70px] relative">

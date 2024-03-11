@@ -1,5 +1,5 @@
 {
-  "url": "https://wewewewe",
+  "url": "https://n8n.abslm.nl/webhook-test/77519258-f51c-4891-a33c-62ec97b7d96a",
   "progressbar": true,
   "background": "#000",
   "theme": "#000",
@@ -76,37 +76,40 @@
               "alignment": "GSMBrand",
               "radio": [
                 {
-                  "id": "1",
+                  "id": "Me&You",
                   "icon": "/assets/icons/MNY.svg",
                   "text": "Me&You",
-                  "value": "MTN"
+                  "value": "sim"
                 },
                 {
-                  "id": "2",
+                  "id": "Telkom",
                   "icon": "/assets/icons/Telkom.svg",
                   "text": "Telkom",
-                  "value": "MTN"
+                  "value": "sim"
                 },
                 {
-                  "id": "3",
+                  "id": "Vodacom",
                   "icon": "/assets/icons/Vodacom.svg",
                   "text": "Vodacom",
-                  "value": "MTN"
+                  "value": "sim"
                 },
                 {
-                  "id": "4",
+                  "id": "Lyca Mobile",
                   "icon": "/assets/icons/Lyca.svg",
-                  "text": "Lyca Mobile"
+                  "text": "Lyca Mobile",
+                  "value": "sim"
                 },
                 {
-                  "id": "5",
+                  "id": "MTN",
                   "icon": "/assets/icons/MTN.svg",
-                  "text": "MTN"
+                  "text": "MTN",
+                  "value": "sim"
                 },
                 {
-                  "id": "6",
+                  "id": "Hello Mobile",
                   "icon": "/assets/icons/HelloMobile.svg",
-                  "text": "Hello Mobile"
+                  "text": "Hello Mobile",
+                  "value": "sim"
                 }
               ]
             }
@@ -123,34 +126,40 @@
               "alignment": "GSMBrand",
               "radio": [
                 {
-                  "id": "1",
+                  "id": "Apple",
                   "icon": "/assets/icons/Apple.svg",
-                  "text": "Apple"
+                  "text": "Apple",
+                  "value": "Brand"
                 },
                 {
-                  "id": "2",
+                  "id": "Sony",
                   "icon": "/assets/icons/Sony.svg",
-                  "text": "Sony"
+                  "text": "Sony",
+                  "value": "Brand"
                 },
                 {
-                  "id": "3",
+                  "id": "Oppo",
                   "icon": "/assets/icons/Oppo.svg",
-                  "text": "Oppo"
+                  "text": "Oppo",
+                  "value": "Brand"
                 },
                 {
-                  "id": "4",
+                  "id": "google",
                   "icon": "/assets/icons/Google.svg",
-                  "text": "google"
+                  "text": "google",
+                  "value": "Brand"
                 },
                 {
-                  "id": "5",
+                  "id": "Huawei",
                   "icon": "/assets/icons/Huawei.svg",
-                  "text": "Huawei"
+                  "text": "Huawei",
+                  "value": "Brand"
                 },
                 {
-                  "id": "6",
+                  "id": "Samsung",
                   "icon": "/assets/icons/Samsung.svg",
-                  "text": "Samsung"
+                  "text": "Samsung",
+                  "value": "Brand"
                 }
               ]
             }
@@ -167,24 +176,28 @@
               "alignment": "column",
               "radio": [
                 {
-                  "id": "1",
-                  "icon": "/assets/icons/rarely.svg",
-                  "text": "Never"
-                },
-                {
                   "id": "2",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never",
+                  "value":"Netflix"
+                },
+                {
+                  "id": "5",
                   "icon": "/assets/icons/sometimes.svg",
-                  "text": "Sometimes"
+                  "text": "Sometimes",
+                  "value":"Netflix"
                 },
                 {
-                  "id": "3",
+                  "id": "10",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Multiple times per week"
+                  "text": "Multiple times per week",
+                  "value":"Netflix"
                 },
                 {
-                  "id": "4",
+                  "id": "20",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Every day"
+                  "text": "Every day",
+                  "value":"Netflix"
                 }
               ]
             }
@@ -203,22 +216,26 @@
                 {
                   "id": "1",
                   "icon": "/assets/icons/rarely.svg",
-                  "text": "Never"
-                },
-                {
-                  "id": "2",
-                  "icon": "/assets/icons/sometimes.svg",
-                  "text": "Sometimes"
+                  "text": "Never",
+                  "value":"Gaming"
                 },
                 {
                   "id": "3",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Multiple times per week"
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes",
+                  "value":"Gaming"
                 },
                 {
-                  "id": "4",
+                  "id": "5",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Every day"
+                  "text": "Multiple times per week",
+                  "value":"Gaming"
+                },
+                {
+                  "id": "10",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day",
+                  "value":"Gaming"
                 }
               ]
             }
@@ -226,7 +243,7 @@
         ]
       },
       {
-        "heading": "How often do you call? 📞",
+        "heading": "How often do you Talk? 📞",
         "content": [
           {
             "category": "input",
@@ -235,19 +252,22 @@
               "alignment": "column",
               "radio": [
                 {
-                  "id": "1",
+                  "id": "100",
                   "icon": "/assets/icons/rarely.svg",
-                  "text": "Rarely"
+                  "text": "Rarely",
+                  "value":"Talk"
                 },
                 {
-                  "id": "2",
+                  "id": "300",
                   "icon": "/assets/icons/sometimes.svg",
-                  "text": "Sometimes"
+                  "text": "Sometimes",
+                  "value":"Talk"
                 },
                 {
-                  "id": "3",
+                  "id": "600",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Always"
+                  "text": "Always",
+                  "value":"Talk"
                 }
               ]
             }
@@ -266,34 +286,40 @@
               "alignment": "GSMBrand",
               "radio": [
                 {
-                  "id": "1",
+                  "id": "Me&You",
                   "icon": "/assets/icons/MNY.svg",
-                  "text": "Me&You"
+                  "text": "Me&You",
+                  "value": "sim"
                 },
                 {
-                  "id": "2",
+                  "id": "Telkom",
                   "icon": "/assets/icons/Telkom.svg",
-                  "text": "Telkom"
+                  "text": "Telkom",
+                  "value": "sim"
                 },
                 {
-                  "id": "3",
+                  "id": "Vodacom",
                   "icon": "/assets/icons/Vodacom.svg",
-                  "text": "Vodacom"
+                  "text": "Vodacom",
+                  "value": "sim"
                 },
                 {
-                  "id": "4",
+                  "id": "Lyca Mobile",
                   "icon": "/assets/icons/Lyca.svg",
-                  "text": "Lyca Mobile"
+                  "text": "Lyca Mobile",
+                  "value": "sim"
                 },
                 {
-                  "id": "5",
+                  "id": "MTN",
                   "icon": "/assets/icons/MTN.svg",
-                  "text": "MTN"
+                  "text": "MTN",
+                  "value": "sim"
                 },
                 {
-                  "id": "6",
+                  "id": "Hello Mobile",
                   "icon": "/assets/icons/HelloMobile.svg",
-                  "text": "Hello Mobile"
+                  "text": "Hello Mobile",
+                  "value": "sim"
                 }
               ]
             }
@@ -310,34 +336,40 @@
               "alignment": "GSMBrand",
               "radio": [
                 {
-                  "id": "1",
+                  "id": "apple",
                   "icon": "/assets/icons/Apple.svg",
-                  "text": "Apple"
+                  "text": "Apple",
+                  "value": "Brand"
                 },
                 {
-                  "id": "2",
+                  "id": "sony",
                   "icon": "/assets/icons/Sony.svg",
-                  "text": "Sony"
+                  "text": "Sony",
+                  "value": "Brand"
                 },
                 {
-                  "id": "3",
+                  "id": "oppo",
                   "icon": "/assets/icons/Oppo.svg",
-                  "text": "Oppo"
+                  "text": "Oppo",
+                  "value": "Brand"
                 },
                 {
-                  "id": "4",
+                  "id": "google",
                   "icon": "/assets/icons/Google.svg",
-                  "text": "Google"
+                  "text": "google",
+                  "value": "Brand"
                 },
                 {
-                  "id": "5",
+                  "id": "huawei",
                   "icon": "/assets/icons/Huawei.svg",
-                  "text": "Huawei"
+                  "text": "Huawei",
+                  "value": "Brand"
                 },
                 {
-                  "id": "6",
+                  "id": "Samsung",
                   "icon": "/assets/icons/Samsung.svg",
-                  "text": "Samsung"
+                  "text": "Samsung",
+                  "value": "Brand"
                 }
               ]
             }
@@ -354,24 +386,28 @@
               "alignment": "column",
               "radio": [
                 {
-                  "id": "1",
-                  "icon": "/assets/icons/rarely.svg",
-                  "text": "Never"
-                },
-                {
                   "id": "2",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never",
+                  "value":"Netflix"
+                },
+                {
+                  "id": "5",
                   "icon": "/assets/icons/sometimes.svg",
-                  "text": "Sometimes"
+                  "text": "Sometimes",
+                  "value":"Netflix"
                 },
                 {
-                  "id": "3",
+                  "id": "10",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Multiple times per week"
+                  "text": "Multiple times per week",
+                  "value":"Netflix"
                 },
                 {
-                  "id": "4",
+                  "id": "20",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Every day"
+                  "text": "Every day",
+                  "value":"Netflix"
                 }
               ]
             }
@@ -390,22 +426,26 @@
                 {
                   "id": "1",
                   "icon": "/assets/icons/rarely.svg",
-                  "text": "Never"
-                },
-                {
-                  "id": "2",
-                  "icon": "/assets/icons/sometimes.svg",
-                  "text": "Sometimes"
+                  "text": "Never",
+                  "value":"Gaming"
                 },
                 {
                   "id": "3",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Multiple times per week"
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes",
+                  "value":"Gaming"
                 },
                 {
-                  "id": "4",
+                  "id": "5",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Every day"
+                  "text": "Multiple times per week",
+                  "value":"Gaming"
+                },
+                {
+                  "id": "10",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day",
+                  "value":"Gaming"
                 }
               ]
             }
@@ -422,19 +462,22 @@
               "alignment": "column",
               "radio": [
                 {
-                  "id": "1",
+                  "id": "The latest and greatest",
                   "icon": "/assets/icons/Fire.svg",
-                  "text": " The latest and greatest"
+                  "text": " The latest and greatest",
+                  "value": "Quality"
                 },
                 {
-                  "id": "2",
+                  "id": "New phone",
                   "icon": "/assets/icons/Phone.svg",
-                  "text": "New phone"
+                  "text": "New phone",
+                  "value": "Quality"
                 },
                 {
-                  "id": "3",
+                  "id": "Refurbrished",
                   "icon": "/assets/icons/Recycle.svg",
-                  "text": "Refurbrished"
+                  "text": "Refurbrished",
+                  "value": "Quality"
                 }
               ]
             }
@@ -453,34 +496,40 @@
               "alignment": "GSMBrand",
               "radio": [
                 {
-                  "id": "1",
+                  "id": "Me&You",
                   "icon": "/assets/icons/MNY.svg",
-                  "text": "Me&You"
+                  "text": "Me&You",
+                  "value": "sim"
                 },
                 {
-                  "id": "2",
+                  "id": "Telkom",
                   "icon": "/assets/icons/Telkom.svg",
-                  "text": "Telkom"
+                  "text": "Telkom",
+                  "value": "sim"
                 },
                 {
-                  "id": "3",
+                  "id": "Vodacom",
                   "icon": "/assets/icons/Vodacom.svg",
-                  "text": "Vodacom"
+                  "text": "Vodacom",
+                  "value": "sim"
                 },
                 {
-                  "id": "4",
+                  "id": "Lyca Mobile",
                   "icon": "/assets/icons/Lyca.svg",
-                  "text": "Lyca Mobile"
+                  "text": "Lyca Mobile",
+                  "value": "sim"
                 },
                 {
-                  "id": "5",
+                  "id": "MTN",
                   "icon": "/assets/icons/MTN.svg",
-                  "text": "MTN"
+                  "text": "MTN",
+                  "value": "sim"
                 },
                 {
-                  "id": "6",
+                  "id": "Hello Mobile",
                   "icon": "/assets/icons/HelloMobile.svg",
-                  "text": "Hello Mobile"
+                  "text": "Hello Mobile",
+                  "value": "sim"
                 }
               ]
             }
@@ -488,43 +537,37 @@
         ]
       },
       {
-        "heading": "What is your favorite  brand? 🤩",
+        "heading": "Netflix, Hulu, YouTube – How much do you watch? 🍿",
         "content": [
           {
             "category": "input",
             "type": "radio",
             "data": {
-              "alignment": "GSMBrand",
+              "alignment": "column",
               "radio": [
                 {
-                  "id": "1",
-                  "icon": "/assets/icons/Apple.svg",
-                  "text": "Apple"
-                },
-                {
                   "id": "2",
-                  "icon": "/assets/icons/Sony.svg",
-                  "text": "Sony"
-                },
-                {
-                  "id": "3",
-                  "icon": "/assets/icons/Oppo.svg",
-                  "text": "Oppo"
-                },
-                {
-                  "id": "4",
-                  "icon": "/assets/icons/Google.svg",
-                  "text": "Google"
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never",
+                  "value":"Netflix"
                 },
                 {
                   "id": "5",
-                  "icon": "/assets/icons/Huawei.svg",
-                  "text": "Huawei"
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes",
+                  "value":"Netflix"
                 },
                 {
-                  "id": "6",
-                  "icon": "/assets/icons/Samsung.svg",
-                  "text": "Samsung"
+                  "id": "10",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times per week",
+                  "value":"Netflix"
+                },
+                {
+                  "id": "20",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day",
+                  "value":"Netflix"
                 }
               ]
             }
@@ -543,22 +586,26 @@
                 {
                   "id": "1",
                   "icon": "/assets/icons/rarely.svg",
-                  "text": "Never"
-                },
-                {
-                  "id": "2",
-                  "icon": "/assets/icons/sometimes.svg",
-                  "text": "Sometimes"
+                  "text": "Never",
+                  "value":"Gaming"
                 },
                 {
                   "id": "3",
-                  "icon": "/assets/icons/always.svg",
-                  "text": "Multiple times per week"
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes",
+                  "value":"Gaming"
                 },
                 {
-                  "id": "4",
+                  "id": "5",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Every day"
+                  "text": "Multiple times per week",
+                  "value":"Gaming"
+                },
+                {
+                  "id": "10",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day",
+                  "value":"Gaming"
                 }
               ]
             }
@@ -575,24 +622,28 @@
               "alignment": "column",
               "radio": [
                 {
-                  "id": "1",
+                  "id": "10",
                   "icon": "/assets/icons/rarely.svg",
-                  "text": "Never"
+                  "text": "Never",
+                  "value": "videoCall"
                 },
                 {
-                  "id": "2",
+                  "id": "20",
                   "icon": "/assets/icons/sometimes.svg",
-                  "text": "Sometimes"
+                  "text": "Sometimes",
+                  "value": "videoCall"
                 },
                 {
-                  "id": "3",
+                  "id": "40",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Multiple times per week"
+                  "text": "Multiple times per week",
+                  "value": "videoCall"
                 },
                 {
-                  "id": "4",
+                  "id": "100",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Every day"
+                  "text": "Every day",
+                  "value": "videoCall"
                 }
               ]
             }
@@ -609,24 +660,28 @@
               "alignment": "column",
               "radio": [
                 {
-                  "id": "1",
+                  "id": "10",
                   "icon": "/assets/icons/rarely.svg",
-                  "text": "Never"
+                  "text": "Never",
+                  "value": "work"
                 },
                 {
-                  "id": "2",
+                  "id": "25",
                   "icon": "/assets/icons/sometimes.svg",
-                  "text": "Sometimes"
+                  "text": "Sometimes",
+                  "value": "work"
                 },
                 {
-                  "id": "3",
+                  "id": "50",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Multiple times per week"
+                  "text": "Multiple times per week",
+                  "value": "work"
                 },
                 {
-                  "id": "4",
+                  "id": "100",
                   "icon": "/assets/icons/always.svg",
-                  "text": "Every day"
+                  "text": "Every day",
+                  "value": "work"
                 }
               ]
             }

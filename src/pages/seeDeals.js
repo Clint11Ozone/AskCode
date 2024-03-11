@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "@/components/utils/header";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import confetti from 'canvas-confetti';
-
-
+import confetti from "canvas-confetti";
 
 function Encrypt({
   firstName,
@@ -35,27 +33,66 @@ function Encrypt({
   const handleClick = () => {
     // Retrieve the selection from localStorage
     const userSelection = localStorage.getItem("userSelection");
+    const brand = localStorage.getItem("Brand");
+    const stream = localStorage.getItem("Netflix");
+    const gaming = localStorage.getItem("Gaming");
+    const videoCall = localStorage.getItem("videoCall");
+    const talk = localStorage.getItem("Talk");
+    const totalGB = (parseInt(stream) || 0) + (parseInt(gaming) || 0) + (parseInt(videoCall) || 0);
 
     // Redirect based on the user selection
     if (userSelection === "1") {
       window.location.href =
-        "https://allplans.co.za/sim-only?data=%7Bdata%7D?talk=%7Btalk%7D";
+        `https://allplans.co.za/sim-only?data=${totalGB}?talk=${talk}`;
     } else if (userSelection === "2") {
-      window.location.href = "https://allplans.co.za/mobiles/brands/apple";
+      window.location.href = `https://allplans.co.za/mobiles/brands/${brand}?data=${totalGB}?talk=${talk}`;
     } else if (userSelection === "3") {
-      window.location.href = "https://allplans.co.za/internet/lte";
+      window.location.href = `https://allplans.co.za/internet/lte?data=${totalGB}?talk=${talk}`;
     }
   };
+
+
+  const [stream, setStream] = useState(null);
+  const [gaming, setGaming] = useState(null);
+  const [videoCall, setVideoCall] = useState(null);
+  const [totalGB, setTotalGB] = useState(0);
+  const [minutes, setMinutes] = useState(0);
 
   useEffect(() => {
     // Trigger confetti on component mount
     confetti({
       particleCount: 100,
       spread: 70,
-      origin: { y: 0.6 }
+      origin: { y: 0.6 },
     });
+
+    const localStorageAvailable = typeof localStorage !== "undefined";
+    if (localStorageAvailable) {
+      const streamValue = localStorage.getItem("Netflix");
+      const gamingValue = localStorage.getItem("Gaming");
+      const videoCallValue = localStorage.getItem("videoCall");
+      const talk = localStorage.getItem("Talk");
+
+      // Convert retrieved values to integers
+      const streamGB = streamValue ? parseInt(streamValue, 10) : 0;
+      const gamingGB = gamingValue ? parseInt(gamingValue, 10) : 0;
+      const videoCallGB = videoCallValue ? parseInt(videoCallValue, 10) : 0;
+      const talkGB = talk ? parseInt(talk, 10) : 0;
+
+
+      // Update states
+      setStream(streamGB);
+      setGaming(gamingGB);
+      setVideoCall(videoCallGB);
+      setMinutes(talkGB)
+      setTotalGB(streamGB + gamingGB + videoCallGB);
+    }
+    
   }, []);
 
+
+
+  const talk = typeof localStorage !== "undefined" ? localStorage.getItem("Talk") : null;
 
   return (
     <div className="w-full md:h-screen min-h-screen h-fillAvailable bg-[#5253F1] flex flex-col items-center">
@@ -63,8 +100,8 @@ function Encrypt({
         <img
           src={"/assets/icons/LogoW.svg"}
           className=" my-[15px] "
-          height={30} width={120}
-          
+          height={30}
+          width={120}
           alt="Logo"
         />
       </div>
@@ -78,7 +115,7 @@ function Encrypt({
           We’ve found the perfect deal
         </h1>
         <h1 className="text-xl text-normal text-white mt-[20px] w-[230px] ">
-          The best deals with 20GB, 200 talk and 400 SMS are ready for you!
+          The best deals with {totalGB}GB, {minutes} talk and 400 SMS are ready for you!
         </h1>
       </div>
 
@@ -155,11 +192,11 @@ function Encrypt({
           >
             <span className="mr-1 text-black">see your deals</span>{" "}
             <img
-            src={"/assets/icons/arrow-right.svg"}
-            width="16px"
-            className="mt-1"
-            alt="Logo"
-          />
+              src={"/assets/icons/arrow-right.svg"}
+              width="16px"
+              className="mt-1"
+              alt="Logo"
+            />
           </button>
         </div>
       </footer>

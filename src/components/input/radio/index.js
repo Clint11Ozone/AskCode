@@ -84,6 +84,7 @@ function Index({ radio, radioV }) {
                 icon={card?.icon}
                 text={card?.text}
                 desc={card?.desc}
+                value={card?.value}
                 selected={selectedCardID === card?.id}
                 onSelect={handleCardSelect}
               />
