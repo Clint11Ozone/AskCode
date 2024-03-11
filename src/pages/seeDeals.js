@@ -115,7 +115,7 @@ function Encrypt({
           We’ve found the perfect deal
         </h1>
         <h1 className="text-xl text-normal text-white mt-[20px] w-[230px] ">
-          The best deals with {totalGB}GB, {minutes} talk and 400 SMS are ready for you!
+          The best deals with {totalGB}GB, {minutes} talk are ready for you!
         </h1>
       </div>
 
