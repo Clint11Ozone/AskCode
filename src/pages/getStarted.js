@@ -14,10 +14,11 @@ import tp from "@/../../template/getStarted";
 import template from "#/template/getStarted";
 import Checkbox from "/public/assets/icons/drm2-checkbox.svg";
 import sim from "#/public/assets/icons/Sim.svg";
-import phone from "#/public/assets/icons/Phone.svg"
-import internet from "#/public/assets/icons/Internet.svg"
+import phone from "#/public/assets/icons/Phone.svg";
+import internet from "#/public/assets/icons/Internet.svg";
 
 export default function Form() {
+  //variables
   const [selectedOption, setSelectedOption] = useState(
     template.form.initialSlide
   );
@@ -25,8 +26,9 @@ export default function Form() {
   const [slides, setSlides] = useState(template.form.initialSlide);
   const [isContinueClicked, setIsContinueClicked] = useState(false);
   const [userSelections, setUserSelections] = useState({});
-
   const sliderRef = useRef(null);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [expectedSelectionsCount, setExpectedSelectionsCount] = useState(0); // State for expected selections count
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -34,6 +36,18 @@ export default function Form() {
     }
     setActiveSlide(0);
   }, [slides]);
+
+  // Function to clear localStorage
+  const clearLocalStorage = useCallback(() => {
+    localStorage.clear();
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("beforeunload", clearLocalStorage);
+    return () => {
+      window.removeEventListener("beforeunload", clearLocalStorage);
+    };
+  }, [clearLocalStorage]);
 
   const handleRadioChange = useCallback((event) => {
     // Save selections
@@ -50,9 +64,13 @@ export default function Form() {
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
 
+    // Decrement expected selections count if not already 0
+    setExpectedSelectionsCount((count) => Math.max(0, count - 1));
+    setCurrentPage((prevPage) => prevPage - 1);
+
     if (sliderRef.current.swiper.activeIndex === 0) {
       if (slides === template.form.initialSlide) {
-        // window.location.reload();
+        // window.location.reload(); // Commented out for now
       } else {
         setSlides(template.form.initialSlide);
         setIsContinueClicked(false);
@@ -64,13 +82,18 @@ export default function Form() {
 
   const handleNext = useCallback(() => {
     if (!sliderRef.current) return;
-
-    // Ensure that a valid option is selected before proceeding
-    if (!selectedOption || !["1", "2", "3"].includes(selectedOption)) {
-      console.log("Please select a valid option to continue.");
+  
+    // Get the current number of selections in localStorage, excluding userSelection
+    const currentSelectionsCount = Object.keys(localStorage).filter(
+      (key) => key !== "userSelection"
+    ).length;
+  
+    if (currentSelectionsCount < expectedSelectionsCount) {
+      console.log("Please complete all selections to continue.");
       return;
     }
-
+  
+    // Logic to determine the next set of slides based on the selection
     let newSlides;
     switch (selectedOption) {
       case "1":
@@ -83,16 +106,35 @@ export default function Form() {
         newSlides = template.form.internetSlides;
         break;
       default:
-        // This default case should ideally never be reached due to the validation above
         console.error("Invalid selection");
         return;
     }
-
+  
+    // Reset expectedSelectionsCount if newSlides is simSlides, phoneSlides or internetSlides
+    // if (
+    //   newSlides === template.form.simSlides ||
+    //   newSlides === template.form.phoneSlides ||
+    //   newSlides === template.form.internetSlides
+    // ) {
+    //   setExpectedSelectionsCount(3);
+    // }
+  
     setSlides(newSlides);
     setIsContinueClicked(true);
-    sliderRef.current.swiper.slideNext();
-  }, [selectedOption]);
-
+  
+    // Try to navigate to the next slide
+    const slideNextSuccessful = sliderRef.current.swiper.slideNext();
+  
+    if (slideNextSuccessful) {
+      // Increment the current page number
+      setCurrentPage((prevPage) => prevPage + 1);
+  
+      // Increment expected selections count
+      if (newSlides !== template.form.initialSlide) {
+        setExpectedSelectionsCount((count) => count + 1);
+      }
+    }
+  }, [currentPage, expectedSelectionsCount, selectedOption, template.form]);
   const selectedClass = selectedOption
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
