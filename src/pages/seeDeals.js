@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Header from "@/components/utils/header";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import confetti from "canvas-confetti";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Encrypt({
   firstName,
@@ -28,9 +31,13 @@ function Encrypt({
     setIsValid(emailRegex.test(enteredEmail));
   };
 
-  const isButtonDisabled = !name || !email || !surName;
+  const isButtonDisabled = !name || !email || !surName || !isValid; // Include isValid in the condition
 
   const handleClick = () => {
+    if (!isValid) {
+      showInvalidEmailToast();
+      return;
+    }
     // Retrieve the selection from localStorage
     const userSelection = localStorage.getItem("userSelection");
     const brand = localStorage.getItem("Brand");
@@ -51,6 +58,9 @@ function Encrypt({
     }
   };
 
+  const handleButtonMouseOver = () => {
+    showInvalidEmailToast();
+  };
 
   const [stream, setStream] = useState(null);
   const [gaming, setGaming] = useState(null);
@@ -71,7 +81,7 @@ function Encrypt({
       const streamValue = localStorage.getItem("Netflix");
       const gamingValue = localStorage.getItem("Gaming");
       const videoCallValue = localStorage.getItem("videoCall");
-      const talk = localStorage.getItem("Talk");
+  const talk = typeof localStorage !== "undefined" ? localStorage.getItem("Talk") : null;
 
       // Convert retrieved values to integers
       const streamGB = streamValue ? parseInt(streamValue, 10) : 0;
@@ -90,7 +100,19 @@ function Encrypt({
     
   }, []);
 
-
+  const showInvalidEmailToast = () => {
+    if (!isValid) {
+      toast.error("Please enter a valid email address.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  };
 
   const talk = typeof localStorage !== "undefined" ? localStorage.getItem("Talk") : null;
 
@@ -155,6 +177,7 @@ function Encrypt({
             placeholder="Enter your email"
             required
           />
+          
         </form>
       </div>
 
@@ -187,6 +210,7 @@ function Encrypt({
               isButtonDisabled ? "opacity-50 cursor-not-allowed" : ""
             }`}
             onClick={handleClick}
+            onMouseOver={handleButtonMouseOver}
             disabled={isButtonDisabled}
             style={{ opacity: isButtonDisabled ? 0.5 : 1 }}
           >
@@ -200,6 +224,7 @@ function Encrypt({
           </button>
         </div>
       </footer>
+      <ToastContainer />
     </div>
   );
 }

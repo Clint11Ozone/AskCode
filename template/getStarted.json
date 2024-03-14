@@ -8,7 +8,42 @@
   "form": {
     "initialSlide": [
       {
-        "heading": "What type of deal aree you looking for?"
+        "heading": "What type of deal aree you looking for?",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "columnV",
+              "radio": [
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never",
+                  "value":"Netflix"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes",
+                  "value":"Netflix"
+                },
+                {
+                  "id": "10",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times per week",
+                  "value":"Netflix"
+                },
+                {
+                  "id": "20",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day",
+                  "value":"Netflix"
+                }
+              ]
+            }
+          }
+        ]
       },
       {
         "heading": "What is yourzzzz favorite  brand? 🤩",

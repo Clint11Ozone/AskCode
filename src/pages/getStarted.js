@@ -35,19 +35,16 @@ export default function Form() {
       // sliderRef.current.swiper.slideTo(0, 0);
     }
     setActiveSlide(0);
+    // localStorage.clear();
   }, [slides]);
+  
 
   // Function to clear localStorage
   const clearLocalStorage = useCallback(() => {
     localStorage.clear();
   }, []);
 
-  useEffect(() => {
-    window.addEventListener("beforeunload", clearLocalStorage);
-    return () => {
-      window.removeEventListener("beforeunload", clearLocalStorage);
-    };
-  }, [clearLocalStorage]);
+  
 
   const handleRadioChange = useCallback((event) => {
     // Save selections
@@ -139,7 +136,7 @@ export default function Form() {
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
   return (
-    <div className=" flex justify-center items-center h-">
+    <div className=" flex justify-center items-center ">
       {!isContinueClicked && (
         <div className="absolute top-1/2 left-1/2 transform md:pb-[100px] -translate-x-1/2 -translate-y-1/2 text-center z-10">
           {/* Label for "Sim" */}

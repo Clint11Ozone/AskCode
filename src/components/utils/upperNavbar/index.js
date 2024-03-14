@@ -5,6 +5,7 @@ function Index({ handlePrev, handleNext, slideIndex = 0, slides }) {
     // Function to refresh the page
     const refreshPage = () => {
       window.location.reload();
+      localStorage.clear();
     };
   
     // Determine the opacity of the back button

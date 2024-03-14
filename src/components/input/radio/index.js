@@ -1,6 +1,7 @@
 import React from "react";
 import RadioCardLarge from "./RadioCardLarge";
 import RadioCardVerticle from "./RadioCardVerticle";
+import Invincible from "./invincible"
 import Brand from "./Brand";
 import Phone from "./Phone";
 import { useState, useEffect } from "react";
@@ -40,6 +41,27 @@ function Index({ radio, radioV }) {
         <form className="  grid grid-cols-1  max-h-[700px] gap-3 mx-4  2xl:mt-[3rem] md:w-[40rem] md:mb-[10px]">
           {radio?.radio?.map((card) => (
             <RadioCardVerticle
+              key={card?.id}
+              id={card?.id}
+              icon={card?.icon}
+              text={card?.text}
+              desc={card?.desc}
+              selected={selectedCardID === card?.id}
+              value={card?.value}
+              onSelect={handleCardSelect}
+            />
+          ))}
+        </form>
+        </div>
+      </>
+    );
+  }else if (radio?.alignment == "columnV") {
+    return (
+      <>
+      <div className="overflow-y-scroll">
+        <form className="  grid grid-cols-1  max-h-[700px] gap-3 mx-4  2xl:mt-[3rem] md:w-[40rem] md:mb-[10px]">
+          {radio?.radio?.map((card) => (
+            <Invincible
               key={card?.id}
               id={card?.id}
               icon={card?.icon}
