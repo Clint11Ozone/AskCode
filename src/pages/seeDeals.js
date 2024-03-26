@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import Header from "@/components/utils/header";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import confetti from "canvas-confetti";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import template from "#/template/getStarted";
+const axios = require("axios");
 
 function Encrypt({
   firstName,
@@ -16,11 +17,17 @@ function Encrypt({
   slideIndex = 0,
   slides,
 }) {
+    const [minutes, setMinutes] = useState(0);
+
+
   const [isValid, setIsValid] = useState(true);
   const [name, setName] = useState("");
   const [surName, setSurname] = useState("");
   const [email, setEmail] = useState("");
-  const [number, setNumber] = useState("");
+  const [stream, setStream] = useState(null);
+  const [gaming, setGaming] = useState(null);
+  const [videoCall, setVideoCall] = useState(null);
+  const [totalGB, setTotalGB] = useState(0);
 
   const handleEmailChange = (e) => {
     const enteredEmail = e.target.value;
@@ -38,35 +45,60 @@ function Encrypt({
       showInvalidEmailToast();
       return;
     }
-    // Retrieve the selection from localStorage
-    const userSelection = localStorage.getItem("userSelection");
-    const brand = localStorage.getItem("Brand");
-    const stream = localStorage.getItem("Netflix");
-    const gaming = localStorage.getItem("Gaming");
-    const videoCall = localStorage.getItem("videoCall");
-    const talk = localStorage.getItem("Talk");
-    const totalGB = (parseInt(stream) || 0) + (parseInt(gaming) || 0) + (parseInt(videoCall) || 0);
-
-    // Redirect based on the user selection
-    if (userSelection === "1") {
-      window.location.href =
-        `https://allplans.co.za/sim-only?data=${totalGB}?talk=${talk}`;
-    } else if (userSelection === "2") {
-      window.location.href = `https://allplans.co.za/mobiles/brands/${brand}?data=${totalGB}?talk=${talk}`;
-    } else if (userSelection === "3") {
-      window.location.href = `https://allplans.co.za/internet/lte?data=${totalGB}?talk=${talk}`;
-    }
+    const webhookUrl = "https://n8n.abslm.nl/webhook-test/17dc05f5-0f58-4440-9404-ef6c9f454cdb";
+  
+    // Data to be sent in the webhook
+    const webhookData = {
+      message: "Users results below",
+      timestamp: new Date().toISOString(),
+      name: name,
+      surName: surName,
+      email: email,
+      minutes: minutes, 
+      stream: stream+"GB",
+      gaming: gaming+"GB",
+      videoCall: videoCall+"GB",
+      totalGB: totalGB+"GB",
+    };
+  
+    // Sending the webhook using Axios
+    axios
+      .post(webhookUrl, webhookData)
+      .then((response) => {
+        console.log(`Status: ${response.status}`);
+        console.log('Body: ', response.data);
+  
+        // If the webhook is set successfully, proceed with the rest of the logic
+        const userSelection = localStorage.getItem("userSelection");
+        const brand = localStorage.getItem("Brand");
+        const stream = localStorage.getItem("Netflix");
+        const gaming = localStorage.getItem("Gaming");
+        const videoCall = localStorage.getItem("videoCall");
+        const talk = localStorage.getItem("Talk");
+        const totalGB =
+          (parseInt(stream) || 0) +
+          (parseInt(gaming) || 0) +
+          (parseInt(videoCall) || 0);
+  
+        // Redirect based on the user selection
+        if (userSelection === "1") {
+          window.location.href = `https://allplans.co.za/sim-only?data=${totalGB}?talk=${talk}`;
+        } else if (userSelection === "2") {
+          window.location.href = `https://allplans.co.za/mobiles/brands/${brand}?data=${totalGB}?talk=${talk}`;
+        } else if (userSelection === "3") {
+          window.location.href = `https://allplans.co.za/internet/lte?data=${totalGB}?talk=${talk}`;
+        }
+      })
+      .catch((error) => {
+        console.error("Error sending webhook:", error);
+        // Handle error - optionally show a toast or take other actions
+      });
   };
+  
 
   const handleButtonMouseOver = () => {
     showInvalidEmailToast();
   };
-
-  const [stream, setStream] = useState(null);
-  const [gaming, setGaming] = useState(null);
-  const [videoCall, setVideoCall] = useState(null);
-  const [totalGB, setTotalGB] = useState(0);
-  const [minutes, setMinutes] = useState(0);
 
   useEffect(() => {
     // Trigger confetti on component mount
@@ -81,7 +113,10 @@ function Encrypt({
       const streamValue = localStorage.getItem("Netflix");
       const gamingValue = localStorage.getItem("Gaming");
       const videoCallValue = localStorage.getItem("videoCall");
-  const talk = typeof localStorage !== "undefined" ? localStorage.getItem("Talk") : null;
+      const talk =
+        typeof localStorage !== "undefined"
+          ? localStorage.getItem("Talk")
+          : null;
 
       // Convert retrieved values to integers
       const streamGB = streamValue ? parseInt(streamValue, 10) : 0;
@@ -89,15 +124,13 @@ function Encrypt({
       const videoCallGB = videoCallValue ? parseInt(videoCallValue, 10) : 0;
       const talkGB = talk ? parseInt(talk, 10) : 0;
 
-
       // Update states
       setStream(streamGB);
       setGaming(gamingGB);
       setVideoCall(videoCallGB);
-      setMinutes(talkGB)
+      setMinutes(talkGB);
       setTotalGB(streamGB + gamingGB + videoCallGB);
     }
-    
   }, []);
 
   const showInvalidEmailToast = () => {
@@ -114,7 +147,8 @@ function Encrypt({
     }
   };
 
-  const talk = typeof localStorage !== "undefined" ? localStorage.getItem("Talk") : null;
+  const talk =
+    typeof localStorage !== "undefined" ? localStorage.getItem("Talk") : null;
 
   return (
     <div className="w-full md:h-screen min-h-screen h-fillAvailable bg-[#5253F1] flex flex-col items-center">
@@ -177,7 +211,6 @@ function Encrypt({
             placeholder="Enter your email"
             required
           />
-          
         </form>
       </div>
 

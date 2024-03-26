@@ -1,18 +1,23 @@
 import React from "react";
 import Checkbox from "/public/assets/icons/drm2-checkbox.svg";
-import Image from "next/image";  // Import the Image component from 'next/image'
+import Image from "next/image"; // Import the Image component from 'next/image'
+import { useRadioStore } from "@/components/utils/store/Store";
 
-
-
-const Phone = ({icon, text, selected, desc, id, onSelect}) => {
-    const selectedClass = selected
+const Phone = ({ icon, text, selected, desc, id, onSelect }) => {
+  const selectedClass = selected
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
+
+  const { selectedOption, setSelectedOption } = useRadioStore();
 
   const handleClick = () => {
     if (!selected) {
       onSelect(id);
     }
+    console.log("Selected Radio Button Text:", text);
+    localStorage.setItem(value, id);
+    setSelectedOption(value, id);
+    console.log(selectedOption);
   };
 
   return (
@@ -41,6 +46,6 @@ const Phone = ({icon, text, selected, desc, id, onSelect}) => {
       </div>
     </div>
   );
-}
+};
 
 export default Phone;

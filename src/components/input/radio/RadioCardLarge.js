@@ -1,10 +1,12 @@
 import Image from "next/image";
-
+import { useRadioStore } from "@/components/utils/store/Store";
 
 const RadioCardLarge = ({ icon, text, selected, desc, id, onSelect }) => {
   const selectedClass = selected
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
+
+  const { selectedOption, setSelectedOption } = useRadioStore();
 
   const handleClick = () => {
     if (!selected) {
@@ -20,7 +22,14 @@ const RadioCardLarge = ({ icon, text, selected, desc, id, onSelect }) => {
           className={`option-card flex flex-col items-center ${selectedClass} flex-grow rounded-[10px] py-0 relative hover:border-[#5253f1] hover:border-[1px] transition-all duration-150 bg-white`}
         >
           <div className="w-5 h-5 border-[1px] rounded-full absolute top-2 right-2 hover:border-[#5253f1] hover:border-[1px]">
-            {selected && <Image src='assets/icons/drm2-checkbox.svg' width={30} height={30} alt="ico" />}
+            {selected && (
+              <Image
+                src="assets/icons/drm2-checkbox.svg"
+                width={30}
+                height={30}
+                alt="ico"
+              />
+            )}
           </div>
           <div className="relative h-[2rem] w-[2rem] my-2 ">
             {icon && (
@@ -41,5 +50,3 @@ const RadioCardLarge = ({ icon, text, selected, desc, id, onSelect }) => {
 };
 
 export default RadioCardLarge;
-
- 

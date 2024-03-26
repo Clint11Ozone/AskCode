@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useRadioStore } from "@/components/utils/store/Store";
+
 
 const RadioCardLarge = ({
   icon,
@@ -13,17 +15,23 @@ const RadioCardLarge = ({
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
 
+  const { selectedOption, setSelectedOption } = useRadioStore();
+
+  
   const handleClick = () => {
     if (!selected) {
       onSelect(id);
     }
+    console.log("Selected brand Button Text:", text);
     localStorage.setItem(value, id);
+    setSelectedOption(value, id);
+    console.log(selectedOption);
   };
 
   return (
     <div className=" items-center flex  flex-col ">
       <div className=" w-[165px]  h-[111px] mx-[3px]  relative ">
-      <input
+        <input
           type="radio"
           id={id}
           value={value}

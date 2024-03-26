@@ -8,7 +8,7 @@
   "form": {
     "initialSlide": [
       {
-        "heading": "What type of deal aree you looking for?",
+        "heading": "What type of deal are you looking for?",
         "content": [
           {
             "category": "input",

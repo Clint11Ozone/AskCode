@@ -445,6 +445,328 @@
             }
           }
         ]
+      },
+      {
+        "heading": "What about gaming? 🎮",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never",
+                  "value":"Gaming"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes",
+                  "value":"Gaming"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times per week",
+                  "value":"Gaming"
+                },
+                {
+                  "id": "10",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day",
+                  "value":"Gaming"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Do you jump on Zoom, Skype, or other video calls? 🎥",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "10",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never",
+                  "value": "videoCall"
+                },
+                {
+                  "id": "20",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes",
+                  "value": "videoCall"
+                },
+                {
+                  "id": "40",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times per week",
+                  "value": "videoCall"
+                },
+                {
+                  "id": "100",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day",
+                  "value": "videoCall"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Do you work or study from home often? 💼",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "10",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never",
+                  "value": "work"
+                },
+                {
+                  "id": "25",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes",
+                  "value": "work"
+                },
+                {
+                  "id": "50",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times per week",
+                  "value": "work"
+                },
+                {
+                  "id": "100",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day",
+                  "value": "work"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Who's keeping you connected these days?📶",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "GSMBrand",
+              "radio": [
+                {
+                  "id": "Me&You",
+                  "icon": "/assets/icons/MNY.svg",
+                  "text": "Me&You",
+                  "value": "sim"
+                },
+                {
+                  "id": "Telkom",
+                  "icon": "/assets/icons/Telkom.svg",
+                  "text": "Telkom",
+                  "value": "sim"
+                },
+                {
+                  "id": "Vodacom",
+                  "icon": "/assets/icons/Vodacom.svg",
+                  "text": "Vodacom",
+                  "value": "sim"
+                },
+                {
+                  "id": "Lyca Mobile",
+                  "icon": "/assets/icons/Lyca.svg",
+                  "text": "Lyca Mobile",
+                  "value": "sim"
+                },
+                {
+                  "id": "MTN",
+                  "icon": "/assets/icons/MTN.svg",
+                  "text": "MTN",
+                  "value": "sim"
+                },
+                {
+                  "id": "Hello Mobile",
+                  "icon": "/assets/icons/HelloMobile.svg",
+                  "text": "Hello Mobile",
+                  "value": "sim"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What is your favorite  brand? 🤩",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "GSMBrand",
+              "radio": [
+                {
+                  "id": "apple",
+                  "icon": "/assets/icons/Apple.svg",
+                  "text": "Apple",
+                  "value": "Brand"
+                },
+                {
+                  "id": "sony",
+                  "icon": "/assets/icons/Sony.svg",
+                  "text": "Sony",
+                  "value": "Brand"
+                },
+                {
+                  "id": "oppo",
+                  "icon": "/assets/icons/Oppo.svg",
+                  "text": "Oppo",
+                  "value": "Brand"
+                },
+                {
+                  "id": "google",
+                  "icon": "/assets/icons/Google.svg",
+                  "text": "google",
+                  "value": "Brand"
+                },
+                {
+                  "id": "huawei",
+                  "icon": "/assets/icons/Huawei.svg",
+                  "text": "Huawei",
+                  "value": "Brand"
+                },
+                {
+                  "id": "Samsung",
+                  "icon": "/assets/icons/Samsung.svg",
+                  "text": "Samsung",
+                  "value": "Brand"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "How much Netflix or YouTube do you watch? 🍿",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "2",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never",
+                  "value":"Netflix"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes",
+                  "value":"Netflix"
+                },
+                {
+                  "id": "10",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times per week",
+                  "value":"Netflix"
+                },
+                {
+                  "id": "20",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day",
+                  "value":"Netflix"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What about gaming? 🎮",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "1",
+                  "icon": "/assets/icons/rarely.svg",
+                  "text": "Never",
+                  "value":"Gaming"
+                },
+                {
+                  "id": "3",
+                  "icon": "/assets/icons/sometimes.svg",
+                  "text": "Sometimes",
+                  "value":"Gaming"
+                },
+                {
+                  "id": "5",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Multiple times per week",
+                  "value":"Gaming"
+                },
+                {
+                  "id": "10",
+                  "icon": "/assets/icons/always.svg",
+                  "text": "Every day",
+                  "value":"Gaming"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "heading": "What type of phone are you looking for? ✨",
+        "content": [
+          {
+            "category": "input",
+            "type": "radio",
+            "data": {
+              "alignment": "column",
+              "radio": [
+                {
+                  "id": "The latest and greatest",
+                  "icon": "/assets/icons/Fire.svg",
+                  "text": " The latest and greatest",
+                  "value": "Quality"
+                },
+                {
+                  "id": "New phone",
+                  "icon": "/assets/icons/Phone.svg",
+                  "text": "New phone",
+                  "value": "Quality"
+                },
+                {
+                  "id": "Refurbrished",
+                  "icon": "/assets/icons/Recycle.svg",
+                  "text": "Refurbrished",
+                  "value": "Quality"
+                }
+              ]
+            }
+          }
+        ]
       }
     ]
   }

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Checkbox from "/public/assets/icons/drm2-checkbox.svg";
 import Link from "next/link";
+import { useRadioStore } from "@/components/utils/store/Store";
 
 const RadioCardLarge = ({
   icon,
@@ -14,13 +15,17 @@ const RadioCardLarge = ({
   const selectedClass = selected
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
+  const { selectedOption, setSelectedOption } = useRadioStore();
 
-  const handleClick = () => {
+  const handleClick = (event) => {
     if (!selected) {
       onSelect(id);
     }
     console.log("Selected Radio Button Text:", text);
     localStorage.setItem(value, id);
+    // const { id, value } = event.target;
+    setSelectedOption(value, id);
+    console.log(selectedOption);
   };
   /*tabnine Can you explain the logic behind this code block? */
   return (

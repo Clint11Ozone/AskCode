@@ -16,10 +16,11 @@ import Checkbox from "/public/assets/icons/drm2-checkbox.svg";
 import sim from "#/public/assets/icons/Sim.svg";
 import phone from "#/public/assets/icons/Phone.svg";
 import internet from "#/public/assets/icons/Internet.svg";
+import {useRadioStore} from "@/components/utils/store/Store"
 
 export default function Form() {
   //variables
-  const [selectedOption, setSelectedOption] = useState(
+  const [selectedOptionz, setSelectedOptionz] = useState(
     template.form.initialSlide
   );
   const [activeSlide, setActiveSlide] = useState(0);
@@ -29,6 +30,8 @@ export default function Form() {
   const sliderRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(0);
   const [expectedSelectionsCount, setExpectedSelectionsCount] = useState(0); // State for expected selections count
+  const { selectedOption, setSelectedOption } = useRadioStore();
+
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -38,25 +41,23 @@ export default function Form() {
     // localStorage.clear();
   }, [slides]);
   
-
-  // Function to clear localStorage
-  const clearLocalStorage = useCallback(() => {
-    localStorage.clear();
-  }, []);
-
   
-
-  const handleRadioChange = useCallback((event) => {
+  
+  function handleRadioChange(event) {
     // Save selections
-    setUserSelections((prev) => ({
-      ...prev,
-      [event.target.name]: event.target.value,
-    }));
-
+    
+    const { name, value } = event.target;
+    // setSelectedOption(type, value);
+    console.log(name, value);
+    setSelectedOption(name, value, (newState) => {
+      console.log("Updated state:", newState);
+    });
+    console.log(selectedOption);
     // Existing state update
-    setSelectedOption(event.target.value);
+    setSelectedOptionz(event.target.value);
     localStorage.setItem("userSelection", event.target.value);
-  }, []);
+  }
+  
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -92,7 +93,7 @@ export default function Form() {
   
     // Logic to determine the next set of slides based on the selection
     let newSlides;
-    switch (selectedOption) {
+    switch (selectedOptionz) {
       case "1":
         newSlides = template.form.simSlides;
         break;
@@ -121,18 +122,23 @@ export default function Form() {
   
     // Try to navigate to the next slide
     const slideNextSuccessful = sliderRef.current.swiper.slideNext();
+    // if (activeSlide === slides.length ) {
+    //   // Redirect to a different page
+    //   window.location.href = "https://apple.com";
+    // }
   
     if (slideNextSuccessful) {
       // Increment the current page number
       setCurrentPage((prevPage) => prevPage + 1);
-  
       // Increment expected selections count
       if (newSlides !== template.form.initialSlide) {
         setExpectedSelectionsCount((count) => count + 1);
       }
-    }
-  }, [currentPage, expectedSelectionsCount, selectedOption, template.form]);
-  const selectedClass = selectedOption
+      }
+   
+  }, [currentPage, expectedSelectionsCount, selectedOptionz, template.form, slides, activeSlide]);
+  
+  const selectedClass = selectedOptionz
     ? "border-[#5253f1] border-[1px]"
     : "border-[#b8b8b8] border-[1px]";
   return (
@@ -142,7 +148,7 @@ export default function Form() {
           {/* Label for "Sim" */}
           <label
             className={` flex rounded-xl w-[340px] h-[70px] mb-2 p-1 ${
-              selectedOption === "1" ? "border-[#5253f1]" : "border-[#b8b8b8]"
+              selectedOptionz === "1" ? "border-[#5253f1]" : "border-[#b8b8b8]"
             } border-2 hover:border-[#5253f1]`}
           >
             <div className="relative h-[2rem] w-[2rem] ml-[15px] my-3 ">
@@ -157,15 +163,17 @@ export default function Form() {
             </div>
             <input
               type="radio"
+              name='ww'
               value="1"
               className="absolute opacity-0 w-0 h-0"
-              checked={selectedOption === "1"}
+              checked={selectedOptionz === "1"}
+              onClick={handleRadioChange}
               onChange={handleRadioChange}
             />
             <div className="flex items-center justify-between">
               <div className="text-[1rem] font-bold  ml-[15px]">Sim</div>
             </div>
-            {selectedOption === "1" && (
+            {selectedOptionz === "1" && (
               <div className="w-5 h-5 ml-auto">
                 <Image src={Checkbox} alt="Selected checkbox for Sim" />
               </div>
@@ -175,7 +183,7 @@ export default function Form() {
           {/* Label for "Phone" */}
           <label
             className={` flex rounded-xl w-[340px] h-[70px] mb-2 p-1 ${
-              selectedOption === "2" ? "border-[#5253f1]" : "border-[#b8b8b8]"
+              selectedOptionz === "2" ? "border-[#5253f1]" : "border-[#b8b8b8]"
             } border-2 hover:border-[#5253f1]`}
           >
             <div className="relative h-[2rem] w-[2rem] ml-[15px] my-3 ">
@@ -190,15 +198,18 @@ export default function Form() {
             </div>
             <input
               type="radio"
+              name='zz'
               value="2"
               className="absolute opacity-0 w-0 h-0"
-              checked={selectedOption === "2"}
+              checked={selectedOptionz === "2"}
+              onClick={handleRadioChange}
               onChange={handleRadioChange}
+
             />
             <div className="flex items-center justify-between">
               <div className="text-[1rem] font-bold  ml-[20px]">Phone</div>
             </div>
-            {selectedOption === "2" && (
+            {selectedOptionz === "2" && (
               <div className="w-5 h-5 ml-auto">
                 <Image src={Checkbox} alt="Selected checkbox for Sim" />
               </div>
@@ -208,7 +219,7 @@ export default function Form() {
           {/* Label for "Internet" */}
           <label
             className={` flex rounded-xl w-[340px] h-[70px] mb-2 p-1 ${
-              selectedOption === "3" ? "border-[#5253f1]" : "border-[#b8b8b8]"
+              selectedOptionz === "3" ? "border-[#5253f1]" : "border-[#b8b8b8]"
             } border-2 hover:border-[#5253f1]`}
           >
             <div className="relative h-[2rem] w-[2rem] ml-[15px] my-3 ">
@@ -223,15 +234,18 @@ export default function Form() {
             </div>
             <input
               type="radio"
+              name='pp'
               value="3"
               className="absolute opacity-0 w-0 h-0"
-              checked={selectedOption === "3"}
+              checked={selectedOptionz === "3"}
+              onClick={handleRadioChange}
               onChange={handleRadioChange}
+
             />
             <div className="flex items-center justify-between">
               <div className="text-[1rem] font-bold  ml-[20px]">Internet</div>
             </div>
-            {selectedOption === "3" && (
+            {selectedOptionz === "3" && (
               <div className="w-5 h-5 ml-auto">
                 <Image src={Checkbox} alt="Selected checkbox for Sim" />
               </div>
