@@ -19,7 +19,7 @@ import internet from "#/public/assets/icons/Internet.svg";
 import {useRadioStore} from "@/components/utils/store/Store"
 
 export default function Form() {
-  //variables
+  //variable
   const [selectedOptionz, setSelectedOptionz] = useState(
     template.form.initialSlide
   );
