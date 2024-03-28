@@ -14,7 +14,7 @@ module.exports = (phase, { defaultConfig }) => {
           "fs": false,
           "path": false,
           "os": false,
-          "net": false,
+          "net": false
         }
       }
       return config
