@@ -17,8 +17,7 @@ function Encrypt({
   slideIndex = 0,
   slides,
 }) {
-    const [minutes, setMinutes] = useState(0);
-
+  const [minutes, setMinutes] = useState(0);
 
   const [isValid, setIsValid] = useState(true);
   const [name, setName] = useState("");
@@ -45,8 +44,8 @@ function Encrypt({
       showInvalidEmailToast();
       return;
     }
-    const webhookUrl = "https://n8n.abslm.nl/webhook-test/17dc05f5-0f58-4440-9404-ef6c9f454cdb";
-  
+    const webhookUrl = template.url;
+
     // Data to be sent in the webhook
     const webhookData = {
       message: "Users results below",
@@ -54,20 +53,20 @@ function Encrypt({
       name: name,
       surName: surName,
       email: email,
-      minutes: minutes, 
-      stream: stream+"GB",
-      gaming: gaming+"GB",
-      videoCall: videoCall+"GB",
-      totalGB: totalGB+"GB",
+      minutes: minutes,
+      stream: stream + "GB",
+      gaming: gaming + "GB",
+      videoCall: videoCall + "GB",
+      totalGB: totalGB + "GB",
     };
-  
+
     // Sending the webhook using Axios
     axios
       .post(webhookUrl, webhookData)
       .then((response) => {
         console.log(`Status: ${response.status}`);
-        console.log('Body: ', response.data);
-  
+        console.log("Body: ", response.data);
+
         // If the webhook is set successfully, proceed with the rest of the logic
         const userSelection = localStorage.getItem("userSelection");
         const brand = localStorage.getItem("Brand");
@@ -79,7 +78,7 @@ function Encrypt({
           (parseInt(stream) || 0) +
           (parseInt(gaming) || 0) +
           (parseInt(videoCall) || 0);
-  
+
         // Redirect based on the user selection
         if (userSelection === "1") {
           window.location.href = `https://allplans.co.za/sim-only?data=${totalGB}?talk=${talk}`;
@@ -94,7 +93,6 @@ function Encrypt({
         // Handle error - optionally show a toast or take other actions
       });
   };
-  
 
   const handleButtonMouseOver = () => {
     showInvalidEmailToast();
@@ -239,15 +237,21 @@ function Encrypt({
       <footer className="bottom-0 w-full  justify-center">
         <div className="flex justify-center space-x-4 max-w-[40rem] mx-auto">
           <button
-            className={`bg-[#8687F5] text-white py-[1rem] lg:py-[1.5rem] mt-auto px-4 rounded-full h-[60px] w-[340px] flex items-center justify-center ${
-              isButtonDisabled ? "opacity-50 cursor-not-allowed" : ""
+            className={`text-white py-[1rem] lg:py-[1.5rem] mt-auto px-4 rounded-full h-[60px] w-[340px] flex items-center justify-center ${
+              isButtonDisabled
+                ? "bg-[#8687F5] opacity-49 cursor-not-allowed"
+                : "bg-white"
             }`}
             onClick={handleClick}
             onMouseOver={handleButtonMouseOver}
             disabled={isButtonDisabled}
             style={{ opacity: isButtonDisabled ? 0.5 : 1 }}
           >
-            <span className="mr-1 text-black">see your deals</span>{" "}
+            <span
+              className={isButtonDisabled ? "text-white" : "text-[#8687F5]"}
+            >
+              see your deals
+            </span>{" "}
             <img
               src={"/assets/icons/arrow-right.svg"}
               width="16px"
