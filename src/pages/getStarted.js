@@ -144,7 +144,7 @@ export default function Form() {
   return (
     <div className=" flex justify-center items-center ">
       {!isContinueClicked && (
-        <div className="absolute top-1/2 left-1/2 transform md:pb-[100px] -translate-x-1/2 -translate-y-1/2 text-center z-10">
+        <div className="absolute top-1/2 left-1/2 transform md:pb-[230px] pb-[80px] -translate-x-1/2 -translate-y-1/2 text-center z-10">
           {/* Label for "Sim" */}
           <label
             className={` flex rounded-xl w-[340px] h-[70px] mb-2 p-1 ${

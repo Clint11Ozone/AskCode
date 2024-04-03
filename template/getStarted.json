@@ -1,5 +1,5 @@
 {
-  "url": "https://n8n.abslm.nl/webhook-test/77519258-f51c-4891-a33c-62ec97b7d96a",
+  "url": "https://n8n.abslm.nl/webhook-test/17dc05f5-0f58-4440-9404-ef6c9f454cdb",
   "progressbar": true,
   "background": "#000",
   "theme": "#000",
@@ -191,9 +191,9 @@
                   "value": "Brand"
                 },
                 {
-                  "id": "Samsung",
+                  "id": "samsung",
                   "icon": "/assets/icons/Samsung.svg",
-                  "text": "Samsung",
+                  "text": "samsung",
                   "value": "Brand"
                 }
               ]
@@ -401,9 +401,9 @@
                   "value": "Brand"
                 },
                 {
-                  "id": "Samsung",
+                  "id": "samsung",
                   "icon": "/assets/icons/Samsung.svg",
-                  "text": "Samsung",
+                  "text": "samsung",
                   "value": "Brand"
                 }
               ]
