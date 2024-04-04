@@ -17,7 +17,6 @@ const RadioCardLarge = ({
 
   const { selectedOption, setSelectedOption } = useRadioStore();
 
-  
   const handleClick = () => {
     if (!selected) {
       onSelect(id);

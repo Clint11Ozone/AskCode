@@ -108,24 +108,13 @@ export default function Form() {
         return;
     }
   
-    // Reset expectedSelectionsCount if newSlides is simSlides, phoneSlides or internetSlides
-    // if (
-    //   newSlides === template.form.simSlides ||
-    //   newSlides === template.form.phoneSlides ||
-    //   newSlides === template.form.internetSlides
-    // ) {
-    //   setExpectedSelectionsCount(3);
-    // }
+    
   
     setSlides(newSlides);
     setIsContinueClicked(true);
   
     // Try to navigate to the next slide
     const slideNextSuccessful = sliderRef.current.swiper.slideNext();
-    // if (activeSlide === slides.length ) {
-    //   // Redirect to a different page
-    //   window.location.href = "https://apple.com";
-    // }
   
     if (slideNextSuccessful) {
       // Increment the current page number

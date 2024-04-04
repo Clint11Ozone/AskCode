@@ -15,12 +15,11 @@ const slide = ({
   slideIndex,
   slides,
   slide,
-  slide2,
-  slide3,
+  
 }) => {
   // console.log(slideIndex);
   return (
-    <div className="flex  flex-col relative h-fillAvailable md:h-screen  items-center  bg-white ">
+    <div className="flex  flex-col relative h-fillAvailable   items-center  bg-white ">
       {/* <ProgressBar currentSlide={slideIndex} slides={slides} /> */}
       <Navigation
         handlePrev={handlePrev}
@@ -40,24 +39,7 @@ const slide = ({
           console.log("not found");
         }
       })}
-      {slide2?.content?.map((element) => {
-        if (element?.category === "display") {
-          return <Display element={element} />;
-        } else if (element?.category === "input") {
-          return <Input element={element} />;
-        } else {
-          console.log("not found");
-        }
-      })}
-      {slide3?.content?.map((element) => {
-        if (element?.category === "display") {
-          return <Display element={element} />;
-        } else if (element?.category === "input") {
-          return <Input element={element} />;
-        } else {
-          console.log("not found");
-        }
-      })}
+
 
       <Navbar
         handlePrev={handlePrev}
