@@ -16,7 +16,7 @@ import FileUploader from "@/components/input/fileUploader/FileUploader2"
 import React from "react";
 
 function Index({ element }) {
-  console.log("input", element);
+  // console.log("input", element);
 
   switch (element?.type) {
     case "form":

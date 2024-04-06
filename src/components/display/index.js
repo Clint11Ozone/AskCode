@@ -19,7 +19,7 @@ import Warning from "@/components/display/warning/warning";
 import React from "react";
 
 function Index({ element }) {
-  console.log("display: ", element);
+  // console.log("display: ", element);
   var type;
 
   switch (element?.type) {

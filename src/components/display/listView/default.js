@@ -2,7 +2,7 @@ import React from "react";
 import { GoShieldCheck } from "react-icons/go";
 
 function Index({ listView}) {
-  console.log(listView);
+  // console.log(listView);
   return (
     // <div>{listView}</div>
     <>
