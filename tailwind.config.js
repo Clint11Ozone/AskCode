@@ -18,7 +18,10 @@ module.exports = {
       },
       height: {
         'fillAvailable': '-webkit-fill-available',
-      }
+      },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
     },
   },
   plugins: [],

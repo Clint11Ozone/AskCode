@@ -45,6 +45,52 @@
         ]
       },
       {
+        "heading": "Summary",
+        "subtitle": "Let us know if you have any more problems",
+        "content": [
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "problem_details",
+                "user_image": "/assets/illustrations/Details.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "problem_details2",
+                "user_image": "/assets/illustrations/Details.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "problem_details3",
+                "user_image": "/assets/illustrations/Details.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
+            }
+          },
+          {
+            "category":"input",
+            "type": "AddProblem",
+            "data":{
+
+            }
+          }
+        ]
+      },
+      {
         "heading": "What’s your name?",
         "content": [
           {
@@ -99,73 +145,49 @@
         ]
       },
       {
-        "heading": "What’s your email?",
-        "subtitle": "",
-        "content": [
-          {
-            "category": "display",
-            "type": "loader-email",
-            "data": {
-              "email": [
-                {
-                  "text": "email",
-                  "subject": "your@email.com",
-                  "to": "full"
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "heading": "Who’s your current provider?",
-        "subtitle": "",
+        "heading": "Who's your current provider?",
         "content": [
           {
             "category": "input",
             "type": "radio",
             "data": {
-              "alignment": "grid",
+              "alignment": "GSMBrand",
               "radio": [
                 {
-                  "id": "1",
-                  "icon": "/assets/icons/option-software.svg",
-                  "text": "Software"
+                  "id": "Me&You",
+                  "icon": "/assets/icons/MNY.svg",
+                  "text": "Me&You",
+                  "value": "sim"
                 },
                 {
-                  "id": "2",
-                  "icon": "/assets/icons/option-audio.svg",
-                  "text": "Audio"
+                  "id": "Telkom",
+                  "icon": "/assets/icons/Telkom.svg",
+                  "text": "Telkom",
+                  "value": "sim"
                 },
                 {
-                  "id": "3",
-                  "icon": "/assets/icons/option-camera.svg",
-                  "text": "Camera"
+                  "id": "Vodacom",
+                  "icon": "/assets/icons/Vodacom.svg",
+                  "text": "Vodacom",
+                  "value": "sim"
                 },
                 {
-                  "id": "4",
-                  "icon": "/assets/icons/option-casing.svg",
-                  "text": "Casing"
+                  "id": "Lyca Mobile",
+                  "icon": "/assets/icons/Lyca.svg",
+                  "text": "Lyca Mobile",
+                  "value": "sim"
                 },
                 {
-                  "id": "5",
-                  "icon": "/assets/icons/option-bluetooth.svg",
-                  "text": "Bluetooth"
+                  "id": "MTN",
+                  "icon": "/assets/icons/MTN.svg",
+                  "text": "MTN",
+                  "value": "sim"
                 },
                 {
-                  "id": "6",
-                  "icon": "/assets/icons/option-water.svg",
-                  "text": "Water Damage"
-                },
-                {
-                  "id": "7",
-                  "icon": "/assets/icons/option-audio.svg",
-                  "text": "Audio during calls"
-                },
-                {
-                  "id": "8",
-                  "icon": "/assets/icons/option-software.svg",
-                  "text": "Software"
+                  "id": "Hello Mobile",
+                  "icon": "/assets/icons/HelloMobile.svg",
+                  "text": "Hello Mobile",
+                  "value": "sim"
                 }
               ]
             }
@@ -173,8 +195,7 @@
         ]
       },
       {
-        "heading": "Tell us, what's wrong?",
-        "subtitle": "We will pass your details through to one of our repair partners. They will repair your device ASAP!",
+        "heading": "What type of device needs fixing?",
         "content": [
           {
             "category": "input",
@@ -183,19 +204,22 @@
               "alignment": "column",
               "radio": [
                 {
-                  "id": "1",
+                  "id": "Phone",
                   "icon": "/assets/icons/Phone.svg",
-                  "text": "Phone"
+                  "text": "Phone",
+                  "value": "deviceType"
                 },
                 {
-                  "id": "2",
+                  "id": "Tablet",
                   "icon": "/assets/icons/Tablet.svg",
-                  "text": "Tablet"
+                  "text": "Tablet",
+                  "value": "deviceType"
                 },
                 {
-                  "id": "3",
+                  "id": "Smartwatch",
                   "icon": "/assets/icons/Smartwatch.svg",
-                  "text": "Smartwatch"
+                  "text": "Smartwatch",
+                  "value": "deviceType"
                 }
               ]
             }
@@ -203,54 +227,49 @@
         ]
       },
       {
-        "heading": "What is the {type} brand?",
-        "subtitle": "",
+        "heading": "What is the brand?",
         "content": [
           {
             "category": "input",
             "type": "radio",
             "data": {
-              "alignment": "grid",
+              "alignment": "GSMBrand",
               "radio": [
                 {
-                  "id": "1",
-                  "icon": "/assets/icons/option-software.svg",
-                  "text": "Software"
+                  "id": "apple-phones-48",
+                  "icon": "/assets/icons/Apple.svg",
+                  "text": "Apple",
+                  "value": "Brand"
                 },
                 {
-                  "id": "2",
-                  "icon": "/assets/icons/option-audio.svg",
-                  "text": "Audio"
+                  "id": "sony-phones-7",
+                  "icon": "/assets/icons/Sony.svg",
+                  "text": "Sony",
+                  "value": "Brand"
                 },
                 {
-                  "id": "3",
-                  "icon": "/assets/icons/option-camera.svg",
-                  "text": "Camera"
+                  "id": "oppo-phones-82",
+                  "icon": "/assets/icons/Oppo.svg",
+                  "text": "Oppo",
+                  "value": "Brand"
                 },
                 {
-                  "id": "4",
-                  "icon": "/assets/icons/option-casing.svg",
-                  "text": "Casing"
+                  "id": "google-phones-107",
+                  "icon": "/assets/icons/Google.svg",
+                  "text": "Google",
+                  "value": "Brand"
                 },
                 {
-                  "id": "5",
-                  "icon": "/assets/icons/option-bluetooth.svg",
-                  "text": "Bluetooth"
+                  "id": "huawei-phones-58",
+                  "icon": "/assets/icons/Huawei.svg",
+                  "text": "Huawei",
+                  "value": "Brand"
                 },
                 {
-                  "id": "6",
-                  "icon": "/assets/icons/option-water.svg",
-                  "text": "Water Damage"
-                },
-                {
-                  "id": "7",
-                  "icon": "/assets/icons/option-audio.svg",
-                  "text": "Audio during calls"
-                },
-                {
-                  "id": "8",
-                  "icon": "/assets/icons/option-software.svg",
-                  "text": "Software"
+                  "id": "samsung-phones-9",
+                  "icon": "/assets/icons/Samsung.svg",
+                  "text": "samsung",
+                  "value": "Brand"
                 }
               ]
             }
@@ -258,55 +277,14 @@
         ]
       },
       {
-        "heading": "What is the {type} model",
-        "subtitle": "",
+        "heading": "What is the brand?",
         "content": [
           {
             "category": "input",
             "type": "radio",
             "data": {
-              "alignment": "grid",
+              "alignment": "Device",
               "radio": [
-                {
-                  "id": "1",
-                  "icon": "/assets/icons/option-software.svg",
-                  "text": "Software"
-                },
-                {
-                  "id": "2",
-                  "icon": "/assets/icons/option-audio.svg",
-                  "text": "Audio"
-                },
-                {
-                  "id": "3",
-                  "icon": "/assets/icons/option-camera.svg",
-                  "text": "Camera"
-                },
-                {
-                  "id": "4",
-                  "icon": "/assets/icons/option-casing.svg",
-                  "text": "Casing"
-                },
-                {
-                  "id": "5",
-                  "icon": "/assets/icons/option-bluetooth.svg",
-                  "text": "Bluetooth"
-                },
-                {
-                  "id": "6",
-                  "icon": "/assets/icons/option-water.svg",
-                  "text": "Water Damage"
-                },
-                {
-                  "id": "7",
-                  "icon": "/assets/icons/option-audio.svg",
-                  "text": "Audio during calls"
-                },
-                {
-                  "id": "8",
-                  "icon": "/assets/icons/option-software.svg",
-                  "text": "Software"
-                }
               ]
             }
           }
@@ -327,20 +305,10 @@
               }
             }
           },
-          {
-            "category": "display",
-            "type": "Breaker",
-            "data": {
-              "textBreaker": "Storage"
-            }
-          },
+        
           {
             "category": "input",
-            "type": "select",
-            "data": {
-              "storage": "32GB",
-              "checkMark": "/assets/illustrations/Checkmark.svg"
-            }
+            "type": "select"
           }
         ]
       },
@@ -449,6 +417,17 @@
             "data": {
               "summary": {
                 "subCatagory": "user_details",
+                "user_image": "/assets/illustrations/Details.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "problem_details",
                 "user_image": "/assets/illustrations/Details.svg",
                 "edit": "/assets/illustrations/edit.svg"
               }
@@ -583,6 +562,50 @@
           {
             "category": "input",
             "type": "fileUploader"
+          }
+        ]
+      },
+      {
+        "heading": "Summary",
+        "subtitle": "Let us know if you have any more problems",
+        "content": [
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "phone_details",
+                "phone_image": "/assets/illustrations/iPhone14PMax.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
+            }
+          },
+          {
+            "category": "display",
+            "type": "summary",
+            "data": {
+              "summary": {
+                "subCatagory": "user_details",
+                "user_image": "/assets/illustrations/Details.svg",
+                "edit": "/assets/illustrations/edit.svg"
+              }
+            }
+          },
+          {
+            "category":"input",
+            "type": "AddProblem",
+            "data":{
+
+            }
+          }
+        ]
+      },
+      {
+        "heading": "",
+        "content": [
+          {
+            "category": "display",
+            "type": "lastRepair"
           }
         ]
       }

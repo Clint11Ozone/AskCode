@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRadioStore } from "@/components/utils/store/Store";
-
+import { useState } from "react";
 
 const RadioCardLarge = ({
   icon,
@@ -17,15 +17,30 @@ const RadioCardLarge = ({
 
   const { selectedOption, setSelectedOption } = useRadioStore();
 
+  const [isActive, setIsActive] = useState(false);
   const handleClick = () => {
     if (!selected) {
       onSelect(id);
     }
     console.log("Selected brand Button Text:", text);
-    localStorage.setItem(value, id);
+  
+    // Retrieve the current array from localStorage or initialize a new array
+    const existingEntries = JSON.parse(localStorage.getItem(value)) || [];
+    
+    // Check if the current id is not already in the array to avoid duplicates
+    if (!existingEntries.includes(id)) {
+      existingEntries.push(id); // Add the new id
+    }
+  
+    // Save the updated array back to localStorage
+    localStorage.setItem(value, JSON.stringify(existingEntries));
+  
     setSelectedOption(value, id);
     console.log(selectedOption);
+    setIsActive(!isActive);
+
   };
+  
 
   return (
     <div className=" items-center flex  flex-col ">

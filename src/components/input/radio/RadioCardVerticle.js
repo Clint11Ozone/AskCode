@@ -22,7 +22,7 @@ const RadioCardLarge = ({
       onSelect(id);
     }
     console.log("Selected Radio Button Text:", text);
-    localStorage.setItem(value, id);
+    localStorage.setItem(value, JSON.stringify(id));
     // const { id, value } = event.target;
     setSelectedOption(value, id);
     console.log(selectedOption);

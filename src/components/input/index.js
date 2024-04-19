@@ -9,13 +9,13 @@ import Email from "@/components/input/email";
 import Details from "@/components/input/NameSurname";
 import Select from "@/components/input/choice";
 import LargeText from "./largeInput/Index";
-import FileUploader from "@/components/input/fileUploader/FileUploader2"
-
+import FileUploader from "@/components/input/fileUploader/FileUploader2";
+import AddButton from "@/components/input/Addproblem/index";
 // export { checkBox, dateTime, InputFields, Radio, Range, TextArea, }
 
 import React from "react";
 
-function Index({ element }) {
+function Index({ element, goToSlide }) {
   // console.log("input", element);
 
   switch (element?.type) {
@@ -39,6 +39,9 @@ function Index({ element }) {
       break;
     case "fileUploader":
       return <FileUploader FileUploader={element?.data} />;
+      break;
+    case "AddProblem":
+      return <AddButton goToSlide={goToSlide} />;
       break;
     default:
   }

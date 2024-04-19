@@ -8,7 +8,7 @@
   "form": {
     "slide": [
       {
-        "heading": "Broke your phone? No worries!",
+        "heading": "Do not let a breakdown get in your way!",
         "subtitle": "We will pass your details through to one of our repair partners. They will repair your device ASAP!",
         "content": [
           {
@@ -65,7 +65,7 @@
         ]
       },
       {
-        "heading": "Tell us, what's wrong?",
+        "heading": "Where are you right now?",
         "content": [
           {
             "category": "input",
@@ -103,7 +103,7 @@
         ]
       },
       {
-        "heading": "Who’s your current provider?",
+        "heading": "What type of vehicle?",
         "subtitle": "",
         "content": [
           {
@@ -148,7 +148,7 @@
         ]
       },
       {
-        "heading": "Who’s your current provider?",
+        "heading": "What is the issue?",
         "subtitle": "Find out how much you can save today! Leave your email to stay up to date on the latest and hottest deals.",
         "content": [
           {
@@ -195,14 +195,6 @@
       {
         "heading": "Tell us more about the issue",
         "content": [
-          {
-            "category": "input",
-            "type": "select",
-            "data": {
-              "storage": "40",
-              "checkMark": "/assets/illustrations/Checkmark.svg"
-            }
-          },
           {
             "category": "input",
             "type": "largeText"

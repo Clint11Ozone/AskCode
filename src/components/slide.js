@@ -15,7 +15,7 @@ const slide = ({
   slideIndex,
   slides,
   slide,
-  
+  goToSlide
 }) => {
   // console.log(slideIndex);
   return (
@@ -34,7 +34,7 @@ const slide = ({
         if (element?.category === "display") {
           return <Display element={element} />;
         } else if (element?.category === "input") {
-          return <Input element={element} />;
+          return <Input element={element} goToSlide={goToSlide} />;
         } else {
           console.log("not found");
         }

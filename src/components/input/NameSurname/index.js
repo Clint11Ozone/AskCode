@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
+// Define the child component, NameInputComponent, that handles the input fields
 function NameInputComponent({ firstName, setFirstName, lastName, setLastName }) {
+  useEffect(() => {
+    localStorage.setItem('firstName', JSON.stringify(firstName));
+    localStorage.setItem('lastName', JSON.stringify(lastName));
+  }, [firstName, lastName]);
+
   return (
     <div className="items-center flex flex-col">
       <form className="flex gap-2.5">
@@ -25,5 +31,24 @@ function NameInputComponent({ firstName, setFirstName, lastName, setLastName }) 
   );
 }
 
+// Define the parent component, ParentComponent, that manages state and handles initialization
+function ParentComponent() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
-export default NameInputComponent;
+  useEffect(() => {
+    const storedFirstName = JSON.parse(localStorage.getItem('firstName'));
+    const storedLastName = JSON.parse(localStorage.getItem('lastName'));
+    if (storedFirstName) setFirstName(storedFirstName);
+    if (storedLastName) setLastName(storedLastName);
+  }, []);
+
+  return <NameInputComponent 
+           firstName={firstName} 
+           setFirstName={setFirstName} 
+           lastName={lastName} 
+           setLastName={setLastName} 
+         />;
+}
+
+export default ParentComponent;

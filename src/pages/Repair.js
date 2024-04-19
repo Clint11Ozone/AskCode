@@ -34,7 +34,28 @@ import axios from "axios";
 
 export default function form() {
     
-  async function fetchApiData(brand) {
+  const myBrand = "apple-phones-48";
+  const deviceSpec = "apple_iphone_13_pro_max-11089"
+  const [device, setDevice] = useState(null)
+  const [spec, setSpec] = useState(null)
+
+  async function getDevice(brand) {
+    try {
+      const response = await axios.get(`http://127.0.0.1:4000/brand/${brand}`);
+      const itemsArray = response.data.data;
+      console.log(itemsArray)
+  
+      // Store each item in localStorage with a unique key
+      // itemsArray.forEach((item) => {
+      //   const key = `device_${item.url}`;
+      //   localStorage.setItem(key, JSON.stringify(item));
+      //   console.log(item.name);
+      // });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
+  async function getSpec(brand) {
     try {
       // Replace 'http://127.0.0.1:4000/brand/apple-phones-48' with your actual API endpoint
       const response = await axios.get(
@@ -46,7 +67,9 @@ export default function form() {
       // Now you can iterate over 'itemsArray' using forEach
       itemsArray.forEach((item) => {
         console.log(item);
-        console.log(item.name);
+        const key = `${item.name}`;
+        localStorage.setItem(key, JSON.stringify(item));
+        console.log(item);
       });
     } catch (error) {
       // Handling errors
@@ -54,13 +77,9 @@ export default function form() {
     }
   };
 
-  // Call the function to make the API call
-  fetchApiData();
+  getDevice(myBrand);
 
   const router = useRouter();
-
-  // console.log(template);
-  // console.log("router.query: ", router.query.form);
 
   const slides = template?.form?.slide;
 
@@ -74,6 +93,11 @@ export default function form() {
   const handleNext = useCallback(() => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideNext();
+  }, []);
+
+  const goToSlide = useCallback((index) => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideTo(index);
   }, []);
 
   const [activeSlide, setActiveSlide] = useState(0);
@@ -110,6 +134,7 @@ export default function form() {
                 slideIndex={activeSlide}
                 slides={slides}
                 slide={slides[activeSlide]}
+                goToSlide={goToSlide}
               />
             </SwiperSlide>
           );

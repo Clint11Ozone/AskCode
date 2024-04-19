@@ -15,7 +15,7 @@ const Phone = ({ icon, text, selected, desc, id, onSelect }) => {
       onSelect(id);
     }
     console.log("Selected Radio Button Text:", text);
-    localStorage.setItem(value, id);
+    localStorage.setItem(value, JSON.stringify(id));
     setSelectedOption(value, id);
     console.log(selectedOption);
   };

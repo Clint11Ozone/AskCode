@@ -12,6 +12,7 @@ import MediumIcon from "@/components/display/location/mediumIcon";
 import MapI from "@/components/utils/google_maps/map";
 import CentreBreaker from "@/components/display/textBreaker/centreTB";
 import Warning from "@/components/display/warning/warning";
+import LastRepair from "@/components/display/last page/lastRepair"
 // import LoaderEmail from "@/components/display/loader/email"
 
 // export { checkBox, dateTime, InputFields, Radio, Range, TextArea, }
@@ -64,6 +65,9 @@ function Index({ element }) {
       break;
     case "warning":
       return <Warning warning={element?.data?.warning} />;
+      break;
+      case "lastRepair":
+      return <LastRepair />;
       break;
     // case "loader-email":
     //   return <LoaderEmail email={element?.data?.email} />;

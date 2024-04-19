@@ -55,7 +55,7 @@ export default function Form() {
     console.log(selectedOption);
     // Existing state update
     setSelectedOptionz(event.target.value);
-    localStorage.setItem("userSelection", event.target.value);
+    localStorage.setItem("userSelection", JSON.stringify(event.target.value));
   }
   
 
